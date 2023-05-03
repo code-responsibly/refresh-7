@@ -1,0 +1,17 @@
+.fuzzy-cursor {
+  background-color: white;
+  border-radius: 50%;
+  height: 150px;
+  mix-blend-mode: difference;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0.3);
+  transition: all 0.3s ease-out;
+  width: 150px;
+  z-index: 1000;
+  
+  &--link {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}

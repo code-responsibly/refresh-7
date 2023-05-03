@@ -1,0 +1,199 @@
+@mixin nav-link-animation() {
+  @include media('<=tablet') {
+    @include fx-link-3d-perspective();
+  }
+  @include media('>tablet') {
+    @include draw-link-arrow('left');
+  }
+}
+
+@mixin draw-link-arrow($arrow-direction: 'right') {
+  --background-size: 100%;
+  --background-height: 0px;
+  --line: var(--draw-link-arrow-color);
+  position: relative;
+  text-decoration: none;
+  transition: color .35s;
+
+  &:active,
+  &.active {
+    --background-size: 0%;
+    --line: var(--nav-link-active-color);
+    --stroke-dashoffset: 26;
+  }
+
+  &:hover {
+    --background-size: 0%;
+    --background-height: 2px;
+    --background-delay: 0s;
+    --line: var(--nav-link-hover-color);
+    --stroke-dashoffset: 26;
+    --stroke-duration: 0.3s;
+    --stroke-easing: cubic-bezier(0.3, 1.5, 0.5, 1);
+    --stroke-delay: 0.25s;
+    color: var(--nav-link-hover-color);
+  }
+
+  span {
+    background-image: linear-gradient(0deg, var(--line) 0%, var(--line) 100%);
+
+    @if $arrow-direction == 'right' {
+      background-position: 100% 100%;
+    } 
+    @else {
+      background-position: 0% 100%;
+    }
+    background-repeat: no-repeat;
+    background-size: var(--background-size, 100%) var(--background-height);
+    line-height: 20px;
+    transition: opacity 0.15s, transform 0.2s,
+      background-size 0.2s linear var(--background-delay, 0.15s);
+    transform: translateZ(0);
+  }
+
+  svg {
+    @if $arrow-direction == 'right' {
+      transform: scaleX(1);
+    } 
+    @else {
+      transform: scaleX(-1);
+    }
+    display: inline;
+    fill: none;
+    height: 20px;
+    left: -2px;
+    line-height: 1;
+    position: relative;
+    stroke: var(--line);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1px;
+    stroke-dasharray: 7.95 30;
+    stroke-dashoffset: var(--stroke-dashoffset, 46);
+    transition: stroke-dashoffset var(--stroke-duration, 0.15s)
+      var(--stroke-easing, linear) var(--stroke-delay, 0s);
+    vertical-align: top;
+    visibility: visible;
+    width: 13px;
+  }
+}
+
+@mixin fx-link-3d-perspective() {
+  --border-color: transparent;
+  --border-length: 0em;
+  --depth: 0px;
+  --border-width: calc(var(--depth) + var(--border-length));
+  --gradient-1: transparent 0 225deg;
+  --gradient-2: transparent 0;
+  background: conic-gradient(
+        at left var(--depth) bottom var(--depth),
+        transparent 90deg,
+        var(--gradient-1),
+        var(--gradient-2)
+      )
+      border-box,
+    conic-gradient(
+        at left var(--border-width) bottom var(--border-width),
+        transparent 90deg,
+        transparent 0
+      )
+      0 100% / calc(100% - var(--border-length))
+      calc(100% - var(--border-length)) border-box;
+  border: solid var(--border-color);
+  border-width: var(--border-length) var(--border-length) var(--border-width)
+    var(--border-width);
+  clip-path: polygon(
+    var(--depth) 0%,
+    var(--depth) 0%,
+    100% 0%,
+    100% calc(100% - var(--depth)),
+    100% calc(100% - var(--depth)),
+    var(--depth) calc(100% - var(--depth))
+  );
+  transition: 0.4s;
+
+  &:hover {
+    --text-color: var(--nav-text-color-hover-mobile);
+    --border-length: 0px;
+    --depth: 20px;
+    --border-width: calc(var(--depth) + var(--border-length));
+
+    clip-path: polygon(
+      0% var(--depth),
+      var(--depth) 0%,
+      100% 0%,
+      100% calc(100% - var(--depth)),
+      calc(100% - var(--depth)) 100%,
+      0% 100%
+    );
+    color: var(--text-color);
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+  }
+
+  &:active,
+  &.active {
+    --text-color: var(--nav-text-color-hover-mobile);
+    --border-length: 0px;
+    --depth: 5px;
+    --border-width: calc(var(--depth) + var(--border-length));
+    --gradient-1: rgb(255 255 255 /0.3) 0 225deg;
+    --gradient-2: rgb(255 255 255 /0.6) 0;
+
+    clip-path: polygon(
+      0% var(--depth),
+      var(--depth) 0%,
+      100% 0%,
+      100% calc(100% - var(--depth)),
+      calc(100% - var(--depth)) 100%,
+      0% 100%
+    );
+    color: var(--text-color);
+    transform: perspective(1000px) rotateX(10deg) rotateY(10deg);
+  }
+}
+
+@mixin fx-link-rollup() {
+  align-items: center;
+  display: inline-flex;
+  text-decoration: none;
+
+  > span {
+    @extend .fx-link-rollup-styling;
+    height: 1.1rem;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  div span {
+    @extend .fx-link-rollup-styling;
+    transition: transform 0.4s ease;
+
+    &:nth-child(1) {
+      transform-origin: right center;
+    }
+    &:nth-child(2) {
+      text-transform: none;
+      transform-origin: left center;
+      transform: rotate(20deg);
+    }
+  }
+
+  &:hover div {
+    transform: translateY(-1.1rem);
+
+    span:nth-child(1) {
+      transform: rotate(20deg);
+    }
+
+    span:nth-child(2) {
+      transform: rotate(0);
+    }
+  }
+}

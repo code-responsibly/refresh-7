@@ -1,0 +1,8 @@
+.sticky-scene {
+  --body-background-opacity: 1;
+  @include x-support('position', sticky);
+  background-color: rgba(
+    var(--body-background-rgb), var(--body-background-opacity)
+  );
+  top: 0;
+}

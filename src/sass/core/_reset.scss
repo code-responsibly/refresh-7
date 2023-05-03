@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+html {
+  --site-mode: var(--display-not-desktop);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  scroll-padding-top: 14vh;
+  
+  @include media('>=tablet') {
+    --site-mode: var(--display-desktop);
+  }
+}
+
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--body-bg-color);
+  color: var(--body-text-color);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+h2 {
+  display: inline;
+  font-family: var(--secondary-font);
+  font-size: 3em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+header {
+  height: 100vh;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style-image: initial;
+  list-style-position: initial;
+  list-style-type: none;
+  list-style: none;
+}

@@ -1,0 +1,63 @@
+.copy-mixin {
+  color: var(--copy-mixin-color-1);
+}
+
+.bold-style {
+  font-weight: 700;
+}
+
+.fx-inline-wave-text {
+  line-height: 0.9;
+  @include fluid-size(height, 20rem, 70rem, 1rem, 3rem);
+}
+
+.fx-link-rollup-styling {
+  line-height: 1;
+  height: 1rem;
+}
+
+.header-styling {
+  &-XL,
+  &-L,
+  &-M,
+  &-S {
+    font-family: var(--header-font);
+    font-weight: var(--header-font-weight);
+    line-height: var(--header-line-height);
+  }
+  &-XL {
+    @include fluid-size(font-size, 20rem, 70rem, 2rem, 5rem);
+  }
+
+  &-L {
+    @include fluid-size(font-size, 20rem, 70rem, 3rem, 4.5rem);
+  }
+
+  &-M {
+    @include fluid-size(font-size, 20rem, 70rem, 1.5rem, 3.2rem);
+  }
+
+  &-S {
+    @include fluid-size(font-size, 20rem, 70rem, 1.3rem, 2.5rem);
+  }
+}
+
+.script-it {
+  color: var(--script-color);
+  font-family: var(--script-font);
+  font-style: italic;
+  font-weight: var(--script-font-weight);
+  text-transform: lowercase;
+}
+
+.inline-script-it {
+  @extend .script-it;
+  color: var(--copy-mixin-color-2);
+  @include fluid-size(font-size, 20rem, 70rem, 1rem, 1.75rem);
+  vertical-align: super;
+}
+
+.script-it-new-line {
+  @extend .script-it;
+  display: inline-block;
+}

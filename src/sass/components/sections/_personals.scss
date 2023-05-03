@@ -1,0 +1,108 @@
+.column-grid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  row-gap: 1em;
+}
+
+.column-grid .info-column {
+  @include flex-box-type(column, nowrap);
+  align-items: center;
+  height: auto;
+  position: relative;
+
+  @include media('>tablet') {
+    border-right: 1px solid var(--personals-grid-divider);
+  }
+}
+
+.personals .column-grid .info-column {
+  > span {
+    animation: copyIntro 0.5s ease forwards;
+    animation-play-state: paused;
+    opacity: 0;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      color: var(--personals-title-color);
+    }
+
+    &:nth-child(2) {
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  &:nth-child(n)::before {
+    content: ' ';
+  }
+}
+
+.column-grid .info-column {
+  &:hover .fx-sunrise::after {
+    clip-path: polygon(
+      50% 0%, 
+      100% 0%, 
+      100% 35%, 
+      100% 70%, 
+      80% 90%, 
+      50% 100%, 
+      20% 90%, 
+      0% 70%, 
+      0% 35%, 
+      0% 0%
+    );
+  }
+
+  span.fx-sunrise:after {
+    clip-path: polygon(
+      0 100%,
+      75% 100%,
+      97% 100%,
+      62% 100%,
+      38% 98%,
+      50% 100%,
+      20% 100%,
+      34% 100%,
+      40% 100%,
+      54% 99%
+    );
+    color: var(--personals-title-hover-color);
+    content: attr(data-text);
+    position: absolute;
+    transform: translate(-100%);
+    transition: clip-path 1s ease;
+    white-space: pre;
+  }
+}
+
+.column-grid .info-column ol {
+  align-self: flex-start;
+  list-style: decimal;
+  list-style-position: inside;
+  padding: 1rem 0 0 0;
+  padding-left: var(--padding-gutter-x, 0.75rem);
+}
+
+.column-grid .info-column ol li {
+  animation: copyIntro 0.5s ease forwards;
+  animation-play-state: paused;
+  opacity: 0;
+  padding: 0.2rem 0;
+
+  a.draw-link-arrow {
+    @include draw-link-arrow();
+  }
+
+  a.fx-link-rollup {
+    @include fx-link-rollup();
+  }
+
+  a {
+    color: var(--personals-link-color);
+
+    &:hover span {
+      color: var(--personals-link-hover-color);
+    }
+  }
+}

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400i');
+
+$font-list: ();
+$font-list: append(
+  $font-list,
+  (
+    'name': 'dinPro-regular',
+    'path': 'https://coderesponsibly.com/fonts/dinpro/dinpro-regular',
+    'exts': (
+      eot,
+      woff,
+      ttf,
+      svg,
+    ),
+  )
+);
+$font-list: append(
+  $font-list,
+  (
+    'name': 'dinPro-bold',
+    'path': 'https://coderesponsibly.com/fonts/dinpro/dinpro-bold',
+    'exts': (
+      eot,
+      woff,
+      ttf,
+      svg,
+    ),
+  )
+);
+$font-list: append(
+  $font-list,
+  (
+    'name': 'dinpro-black',
+    'path': 'https://coderesponsibly.com/fonts/dinpro/dinpro-black',
+    'exts': (
+      eot,
+      woff,
+      ttf,
+      svg,
+    ),
+  )
+);
+$font-list: append(
+  $font-list,
+  (
+    'name': 'gilroy',
+    'path': 'https://coderesponsibly.com/fonts/gilroy/gilroy-medium-webfont',
+    'weight': 300,
+    'exts': (
+      woff2,
+      woff,
+    ),
+  )
+);
+$font-list: append(
+  $font-list,
+  (
+    'name': 'gilroy',
+    'path': 'https://coderesponsibly.com/fonts/gilroy/gilroy-bold-webfont',
+    'weight': 500,
+    'exts': (
+      woff2,
+      woff,
+    ),
+  )
+);
+$font-list: append(
+  $font-list,
+  (
+    'name': 'gilroy',
+    'path': 'https://coderesponsibly.com/fonts/gilroy/gilroy-extrabold-webfont',
+    'weight': 700,
+    'exts': (
+      woff2,
+      woff,
+    ),
+  )
+);
+$font-list: append(
+  $font-list,
+  (
+    'name': 'gilroy',
+    'path': 'https://coderesponsibly.com/fonts/gilroy/gilroy-heavy-webfont',
+    'weight': 900,
+    'exts': (
+      woff2,
+      woff,
+    ),
+  )
+);
+
+@include font-face-multiple($font-list);

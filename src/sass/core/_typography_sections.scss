@@ -1,0 +1,164 @@
+.about {
+  .copy-section .copy-mixin {
+    color: var(--copy-mixin-color-1);
+  }
+  .text-mixin-styling {
+    color: var(--copy-mixin-color-2);
+  }
+}
+
+.big-list-headline-styling {
+  font-family: var(--secondary-font);
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.big-list-index-styling {
+  font-family: var(--secondary-font);
+  font-size: 9.625rem;
+  line-height: 0.7em;
+}
+
+.big-list-copy-styling {
+  @include fluid-size(font-size, 20rem, 70rem, 1.05rem, 1.25rem);
+  font-family: var(--primary-font);
+  line-height: 1.6;
+}
+
+.download-me {
+  .copy-section .copy-mixin {
+    color: var(--copy-mixin-color-2);
+  }
+
+  .text-mixin-styling {
+    color: var(--copy-mixin-color-1);
+  }
+
+  .download-grid-styling {
+    //@include fluid-size(font-size, 20rem, 70rem, 0.875rem, 1.2rem);
+    @include fluid-size(font-size, 20rem, 70rem, 1.05rem, 1.25rem);
+  }
+}
+
+.focus-area {
+
+  &-column-styling {
+    @include fluid-size(font-size, 20rem, 70rem, 1rem, 1.2rem);
+  }
+
+  &-date-styling {
+    @include fluid-size(font-size, 20rem, 70rem, 1rem, 1.2rem);
+  }
+  
+  &-header-styling {
+    font-family: var(--script-font);
+    @include fluid-size(font-size, 20rem, 70rem, 1.5rem, 1.7rem);
+  }
+
+  &-intro-styling {
+    @include fluid-size(font-size, 20rem, 70rem, 1rem, 1.2rem);
+  }
+
+  &-links-styling {
+    @include fluid-size(font-size, 20rem, 70rem, 1rem, 1.2rem);
+  }
+
+  &-tagline-styling {
+    @include fluid-size(font-size, 20rem, 70rem, 1rem, 1.5rem);
+  }
+
+  &-title-styling {
+    font-family: var(--primary-bold-font);
+    @include fluid-size(font-size, 20rem, 70rem, 1.5rem, 3.5rem);
+  }
+}
+
+.grid-box-category-styling {
+  @include fluid-size(font-size, 20rem, 70rem, 0.875rem, 0.875rem);
+  font-family: var(--script-font);
+  font-weight: 300;
+}
+
+.grid-box-header-styling {
+  @include fluid-size(font-size, 20rem, 70rem, 1.15rem, 1.25rem);
+  font-family: var(--secondary-font);
+  font-weight: bold;
+}
+
+.grid-box-item-styling {
+  @include fluid-size(font-size, 20rem, 70rem, 1rem, 1rem);
+  font-family: var(--primary-font);
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+.job-grid-styling {
+  h3 {
+    @include fluid-size(font-size, 20rem, 70rem, 1.15rem, 1.25rem);
+    color: var(--career-grid-hair-tagline-color);
+    font-family: var(--primary-bold-font);
+    font-weight: 300;
+  }
+
+  p {
+    @include fluid-size(font-size, 20rem, 70rem, 1rem, 1.125rem);
+    color: var(--career-grid-hair-tagline-color);
+    font-family: var(--primary-font);
+    font-weight: 300;
+
+    .script-it-new-line {
+      @include fluid-size(font-size, 20rem, 70rem, 0.875rem, 0.875rem);
+      color: var(--career-grid-job-title-color);
+      font-weight: 300;
+      text-transform: none;
+    }
+  }
+
+  .hairstyle-box-styling p {
+    @include fluid-size(font-size, 20rem, 70rem, 1.05rem, 1.125rem);
+
+    color: var(--career-grid-job-title-color);
+    font-family: var(--primary-font);
+    font-weight: 500;
+    line-height: 1.2;
+  }
+}
+
+.nav-link-styling a {
+  font-family: var(--nav-font);
+  font-size: var(--nav-font-size-mobile);
+  font-weight: var(--nav-font-weight);
+  line-height: var(--nav-font-line-height-mobile);
+  
+  @include media('>=tablet') {
+    font-size: var(--nav-font-size-desktop);
+    line-height: var(--nav-font-line-height-desktop);
+  }
+}
+
+.nav-info-box-styling span {
+  font-family: var(--nav-info-area-font);
+  font-size: var(--nav-info-area-mobile-font-size);
+  font-weight: var(--nav-info-area-font-wieght);
+  white-space: nowrap;
+
+  @include media('>=tablet') {
+    font-size: var(--nav-info-area-desktop-font-size);
+  }
+}
+
+.section-text-styling {
+  @include fluid-size(font-size, 20rem, 70rem, 1.05rem, 1.25rem);
+  
+  color: var(--copy-color);
+  font-family: var(--section-text-font);
+  line-height: var(--section-text-line-height);
+}
+
+.take-action-styling span {
+  color:  var(--header-action-menu-color);
+  font-family: var(--cr-font);
+  font-size: var(--cr-font-size);
+  font-weight: var(--cr-font-weight);
+  text-transform: uppercase;
+}

@@ -1,0 +1,126 @@
+.rules .cr-box {
+  @include flex-box-type(column, nowrap);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.rules-list {
+  @include flex-box-type(column, nowrap);
+  width: 90vw;
+
+  @include media('>=tablet') {
+    width: 80vw;
+    max-width: 1440px;
+  }
+}
+
+.rules-item {
+  @include flex-box-type(row, nowrap);
+  align-items: flex-start;
+  padding-bottom: 10vh;
+
+  @include media('>=tablet') {
+    padding-bottom: 25vh;
+  }
+
+  &:nth-child(odd) {
+    justify-content: flex-start;
+    
+    .rules-item-headline span {
+      border-right: 1px dashed var(--principles-border-color);
+      color: rgba(var(--principles-odd-item-color));
+      text-align: right;
+    }
+  }
+
+  &:nth-child(even) {
+    justify-content: flex-end;
+    
+    .rules-item-headline span {
+      border-left: 1px dashed var(--principles-border-color);
+      color: rgba(var(--principles-even-item-color));
+      text-align: left;
+    }
+  }
+
+  .rules-column-wrapper {
+    @include flex-box-type(column, nowrap);
+    flex: 0 1 80%;
+  }
+
+  .rules-item-index {
+    flex: 0 1 auto;
+  }
+
+  &:nth-child(n + 10) {
+    .rules-column-wrapper {
+      flex: 0 1 auto;
+    }
+    .rules-item-index {
+      flex: 0 1 40%;
+    }
+  }
+
+  .rules-item-index {
+    width: auto;
+    
+    svg {
+      height: 100%;
+      width: auto;
+    }
+
+    &:nth-child(odd) svg text {
+      --index-stroke-color: var(--principles-odd-item-color);
+      stroke: var(--index-stroke-color);
+    }
+
+    &:nth-child(even) svg text {
+      --index-stroke-color: var(--principles-even-item-color);
+      stroke: var(--index-stroke-color);
+    }
+    svg text {
+      animation: itemStrokeFillAnimation 2s forwards;
+      animation-play-state: paused;
+      height: inherit;
+      stroke-width: 2;
+      text-transform: uppercase;
+      width: inherit;
+    }
+  }
+
+  .rules-item-headline {
+    border-bottom: 1px dashed var(--principles-border-color);
+
+    span {
+      animation: sectionIntro 1s ease forwards;
+      animation-play-state: paused;
+      display: flex;
+      padding-left: 0.2em;
+      padding-right: 0;
+      width: 100%;
+      
+      @include media('>tablet') {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  &:nth-child(odd) .rules-item-copy {
+    color: rgba(var(--principles-odd-item-color));
+  }
+
+  &:nth-child(even) .rules-item-copy {
+    color: rgba(var(--principles-even-item-color));
+  }
+
+  .rules-item-copy {
+    animation: copyIntro 1s ease forwards;
+    animation-play-state: paused;
+    
+    p {
+      margin-top: 0.5em;
+    }
+  }
+}

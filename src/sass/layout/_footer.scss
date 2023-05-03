@@ -1,0 +1,16 @@
+footer {
+  background-color: var(--footer-background-color);
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  
+  div {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  p {
+    color: var(--footer-text-color);
+    margin: 0;
+    text-align: center;
+  }
+}

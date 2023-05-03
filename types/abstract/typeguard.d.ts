@@ -1,0 +1,40 @@
+import { TClass } from '@base/constants/types';
+/**
+ * Non-Instantiatable Class that allows for a while range of Safe Checks
+ * & Type Guards across basic and advanced data types.
+ *
+ */
+export declare abstract class TypeGuard {
+    /**
+     * Assigns an unknown type to the expected data type.
+     * @param t the requested Instantiatable data type.
+     * @returns the instance of t
+     */
+    static cast<T, U>(t: T): U;
+    /**
+     * Checks to see if the unknown instance belongs to the expected Data Type
+     * @param TheClass The expected Data Type we believe the object is
+     * @param obj the unknown instance of a data type
+     * @returns the unknown object as an instance of the passed Data Type,
+     * otherwise, a logicial Error is thrown.
+     */
+    static assertInstance<T>(TheClass: TClass<T>, obj: unknown): T;
+    /**
+     * Checks the instance if it is Null or Undefined.
+     * @param value instance to check against nullable data.
+     * @returns nonnullable value if it is in fact not empty or throws an error.
+     */
+    static guardForNull<T>(value: T): NonNullable<T>;
+    /**
+     * Checks against Null or Undefined.  Not to be used for string data type.
+     * @param value instance to check against nullable data.
+     * @returns true if the value is empty
+     */
+    static isValueEmpty<T>(value: T): value is NonNullable<T>;
+    /**
+     * Assets if the value is Null and only throws an error.
+     * Method meets conditions for GTS / ESLint to guard against null.
+     * @param value instance to check against nullable data.
+     */
+    protected static assertValueEmpty<T>(value: T): asserts value is NonNullable<T>;
+}

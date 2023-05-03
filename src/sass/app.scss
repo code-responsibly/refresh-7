@@ -1,0 +1,45 @@
+/* VENDOR - Default fall-backs and external files.
+========================================================================== */
+@import 'vendor/_normalize.scss';
+
+/* Abstract - Base Variable file along with starting point Mixins and Placeholders.
+========================================================================== */
+@import 'abstract/_functions.scss';
+@import 'abstract/_mixins.scss';
+@import 'abstract/_placeholders.scss';
+/* CORE - Reset & Typography
+========================================================================== */
+@import 'core/_reset.scss';
+@import 'core/_fonts.scss';
+@import 'core/_variables.scss';
+@import 'core/_typography_general.scss';
+@import 'core/_typography_sections.scss';
+
+/* Used Across Modules and Components
+========================================================================== */
+@import 'utilities/_animations.scss';
+@import 'utilities/_text_effects.scss';
+@import 'utilities/_hover_effects.scss';
+
+/* Layout - Structure and layout files.
+========================================================================== */
+@import 'layout/_general.scss';
+@import 'layout/_panels.scss';
+@import 'layout/_scenes.scss';
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
+
+/* MODULES - Re-usable site elements.
+========================================================================== */
+@import 'components/cursor/_cursor.scss';
+@import 'components/nav/_nav.scss';
+
+/* PAGES - Site Pages
+========================================================================== */
+@import 'components/sections/_about.scss';
+@import 'components/sections/_downloadme.scss';
+@import 'components/sections/_home.scss';
+@import 'components/sections/_personals.scss';
+@import 'components/sections/_principles.scss';
+@import 'components/sections/_sportsscience.scss';
+@import 'components/sections/_workgrid.scss';

@@ -1,0 +1,25 @@
+.about .cr-box {
+  justify-content: center;
+
+  .copy-section {
+    flex: 0 0 auto;
+    width: 85%;
+  }
+}
+.about .reverse-dashed-drop-shadow {
+  @include reverse-dashed-drop-shadow(
+    var(--base-color),
+    var(--about-water-bottle-dash-fill-color),
+    var(--about-water-bottle-dash-stroke-color)
+  );
+}
+
+.about .inline-wave-text {
+  @include media('<tablet') {
+  @include reverse-dashed-drop-shadow(
+    var(--base-color),
+    var(--about-water-bottle-dash-fill-color),
+    var(--about-water-bottle-dash-stroke-color)
+  );
+  }
+}

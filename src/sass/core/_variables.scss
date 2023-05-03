@@ -1,0 +1,750 @@
+:root {
+  //** base settings **/
+  --display-desktop: 'desktop';
+  --display-not-desktop: 'not-desktop';
+  --display: var(--display-desktop);
+  --padding-gutter-x: 1.5rem;
+  --padding-gutter-y: 0;
+  --theme-prefix: 'theme-';
+  --total-themes: 6;
+
+  /** Fonts **/
+  --primary-font: 'dinpro-regular', sans-serif;
+  --primary-bold-font: 'dinpro-bold', sans-serif;
+  --primary-black-font: 'dinpro-black', sans-serif;
+  --secondary-font: 'gilroy', sans-serif;
+  --script-font: 'Libre Baskerville', sans-serif;
+
+  /** Font Styling **/
+  --body-font: var(--primary-font);
+  --body-font-size: 1rem;
+  --body-font-weight: normal;
+  --body-line-height: 1.5;
+  --header-font: var(--secondary-font);
+  --header-font-weight: 700;
+  --header-line-height: 1;
+  --header-action-menu-font: var(--primary-font);
+  --nav-info-area-font: var(--primary-font);
+  --nav-info-area-desktop-font-size: 0.875rem;
+  --nav-info-area-mobile-font-size: 1.15rem;
+  --nav-info-area-font-weight: normal;
+  --nav-font: var(--secondary-font);
+  --nav-font-size-desktop: 0.875rem;
+  --nav-font-size-mobile: 6.8vw;
+  --nav-font-weight: 500;
+  --nav-font-line-height-desktop: 5.49vh;
+  --nav-font-line-height-mobile: 1.25;
+  --script-font-weight: 400;
+  --section-text-font: var(--primary-font);
+  --section-text-line-height: 1.5;
+
+  /** Theme Colors Styling **/
+  --base-color: #f8f9fa;
+  --base-color-rgb: 248, 249, 250;
+  --base-color-filter: brightness(0) saturate(100%) invert(92%) sepia(52%) saturate(343%)
+    hue-rotate(180deg) brightness(104%) contrast(96%);
+  --content-color: #212529;
+  --content-color-rgb: 33, 37, 41;
+  --content-color-filter: brightness(0) saturate(100%) invert(6%) sepia(3%) saturate(4328%)
+    hue-rotate(169deg) brightness(98%) contrast(82%);
+  --content-color-alt: #e44b4a;
+  --content-color-alt-rgb: 228, 75, 74;
+  --content-color-alt-filter: brightness(0) saturate(100%) invert(40%) sepia(96%) saturate(1928%)
+    hue-rotate(336deg) brightness(101%) contrast(83%);
+
+  /** Global Color Styling **/
+  --body-text-color: var(--content-color);
+  --body-bg-color: var(--base-color);
+  --body-background-rgb: var(--base-color-rgb);
+  --copy-color: var(--content-color);
+  --copy-mixin-color-1: var(--content-color-alt);
+  --copy-mixin-color-2: var(--content-color);
+  --script-color: var(--content-color);
+
+  /** Text Effects Color Styling **/
+  --draw-link-arrow-color: var(--content-color);
+  --text-fx-general-stroke-color: transparent;
+  --text-fx-fill-color: var(--content-color-alt);
+  --text-fx-solid-color: var(--content-color-alt);
+  --text-fx-solid-color-alt: var(--content-color);
+  --text-fx-outline-color: var(--base-color);
+  --text-fx-shadow-color: var(--content-color);
+  --text-fx-link-border-color: var(--content-color-alt);
+  --text-fx-link-stroke-color: var(--content-color);
+  --text-fx-link-stroke-hover-color: var(--base-color);
+
+  /** Filters Styling **/
+  --filter-hairstyles-color: var(--content-color-filter);
+  --filter-home-logo: var(--content-color-filter);
+  --filter-home-logo-overlay: var(--content-color-alt-filter);
+  --filter-home-logo-hover: var(--content-color-alt-filter);
+  --filter-home-logo-overlay-hover: var(--content-color-filter);
+  --filter-personals-category-color: var(--content-color-filter);
+  --filter-social-icon-color: var(--filter-home-logo);
+  --filter-social-icon-hover-color: var(--filter-home-logo-hover);
+  --filter-wheel-color: var(--filter-hairstyles-color);
+
+  /** Nav Color Styling **/
+  --nav-bg-color: var(--body-bg-color);
+  --nav-bg-border-color: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  --nav-bg-border-open-color: 0 1px 10px rgba(0, 0, 0, 0.2);
+  --nav-bg-color-mobile: var(--base-color);
+  --nav-burger-color: var(--content-color-alt);
+  --nav-burger-bg-color: var(--body-bg-color);
+  --nav-text-color-hover-mobile: var(--base-color);
+  --nav-info-area-color: var(--content-color-alt);
+  --nav-link-color: var(--content-color-alt);
+  --nav-link-active-color: var(--content-color);
+  --nav-link-hover-color: var(--content-color);
+
+  /** Home Header Color Styling **/
+  --header-action-menu-color: var(--content-color);
+  --header-action-menu-hover-color: var(--content-color-alt);
+  --header-arrow-color: var(--content-color);
+  --social-icon-opacity: 1;
+
+  /** Footer Color Styling **/
+  --footer-background-color: var(--content-color);
+  --footer-text-color: var(--base-color);
+
+  /** Saying Hello Color Styling **/
+  --about-water-bottle-stroke-color: var(--content-color);
+  --about-water-bottle-dash-stroke-color: var(--content-color-alt);
+  --about-water-bottle-dash-fill-color: var(--content-color);
+
+  /** Career Path Color Styling **/
+  --career-grid-job-title-color: var(--content-color-alt);
+  --career-grid-hair-tagline-color: var(--content-color);
+
+  /** The Personals Color Styling **/
+  --personals-grid-divider: var(--content-color-alt);
+  --personals-title-color: var(--content-color);
+  --personals-title-hover-color: var(--content-color-alt);
+  --personals-link-color: var(--content-color-alt);
+  --personals-link-hover-color: var(--content-color);
+  --personal-logo-opacity: 0.3;
+
+  /** Leadership Color Styling **/
+  --principles-border-color: var(--content-color);
+  --principles-odd-item-color: var(--content-color-rgb);
+  --principles-even-item-color: var(--content-color-alt-rgb);
+
+  /** Download Codebase Color Styling **/
+  --download-primary-copy-color: var(--copy-mixin-color-2);
+  --download-secondary-copy-color: var(--copy-mixin-color-1);
+  --download-wheel-opacity: 0.8;
+
+  /** Sports Science Color Styling **/
+  --focus-area-background-color: #f8f9fa;
+  --focus-area-text-color: #212529;
+}
+
+html[data-theme='theme-0'] {
+  --base-color: #f8f9fa;
+  --base-color-rgb: 248, 249, 250;
+  --base-color-filter: brightness(0) saturate(100%) invert(92%) sepia(52%) saturate(343%)
+    hue-rotate(180deg) brightness(104%) contrast(96%);
+  --content-color: #f8f9fa;
+  --base-color-rgb: 248, 249, 250;
+  --base-color-filter: brightness(0) saturate(100%) invert(92%) sepia(52%) saturate(343%)
+    hue-rotate(180deg) brightness(104%) contrast(96%);
+  --content-color-alt: #f8f9fa;
+  --base-color-rgb: 248, 249, 250;
+  --base-color-filter: brightness(0) saturate(100%) invert(92%) sepia(52%) saturate(343%)
+    hue-rotate(180deg) brightness(104%) contrast(96%);
+  --content-color-alt-2: #f8f9fa;
+  --content-color-alt-2-rgb: 248, 249, 250;
+  --content-color-alt-2-filter: brightness(0) saturate(100%) invert(92%) sepia(52%) saturate(343%)
+    hue-rotate(180deg) brightness(104%) contrast(96%);
+
+  --filter-social-icon-color: invert(1) brightness(1) grayscale(1);
+  --filter-social-icon-hover-color: invert(1) brightness(1) grayscale(1);
+  --focus-area-background-color: #f8f9fa;
+  --focus-area-text-color: #f8f9fa;
+  --nav-bg-border-color: 0 1px 1px rgba(0, 0, 0, 0);
+  --nav-bg-border-open-color: var(--nav-bg-border-color);
+  --social-icon-opacity: 0;
+  --text-fx-general-stroke-color: transparent;
+}
+
+html[data-theme='theme-1'] {
+  --filter-hairstyles-color: brightness(1) sepia(1) grayscale(1);
+  --filter-wheel-color: var(--filter-hairstyles-color);
+}
+
+html[data-theme='theme-2'] {
+  /** Theme Colors Overrides **/
+  --base-color: #01b0d3;
+  --base-color-rgb: 1, 176, 211;
+  --base-color-filter: brightness(0) saturate(100%) invert(70%) sepia(58%) saturate(7498%)
+    hue-rotate(159deg) brightness(103%) contrast(99%);
+  --content-color: #0a4a55;
+  --content-color-rgb: 10, 74, 85;
+  --content-color-filter: brightness(0) saturate(100%) invert(21%) sepia(95%) saturate(427%)
+    hue-rotate(141deg) brightness(88%) contrast(94%);
+  --content-color-alt: #f8f9fa;
+  --content-color-alt-rgb: 248, 249, 250;
+  --content-color-alt-filter: brightness(0) saturate(100%) invert(90%) sepia(92%) saturate(85%)
+    hue-rotate(72deg) brightness(112%) contrast(95%);
+
+  /** Global Color Overrides **/
+  --body-text-color: var(--content-color-alt);
+  --copy-color: var(--content-color-alt);
+  --copy-mixin-color-1: var(--content-color);
+  --copy-mixin-color-2: var(--content-color-alt);
+
+  /** Text Effects Overrides **/
+  --draw-link-arrow-color: var(--content-color-alt);
+  --text-fx-fill-color: var(--content-color);
+  --text-fx-solid-color: var(--content-color-alt);
+  --text-fx-solid-color-alt: var(--content-color);
+  --text-fx-outline-color: var(--base-color);
+  --text-fx-shadow-color: var(--content-color);
+  --text-fx-link-border-color: var(--content-color);
+  --text-fx-link-stroke-color: var(--content-color-alt);
+  --text-fx-link-stroke-hover-color: var(--base-color);
+
+  /** Filters Overrides **/
+  --filter-hairstyles-color: brightness(200%) saturate(0%) sepia(100%) saturate(427%)
+    hue-rotate(157deg);
+  --filter-home-logo-overlay: var(--content-color-alt-filter);
+  --filter-home-logo: var(--content-color-filter);
+  --filter-home-logo-overlay-hover: var(--content-color-filter);
+  --filter-home-logo-hover: var(--content-color-alt-filter);
+  --filter-personals-category-color: var(--filter-home-logo-overlay-hover);
+  --filter-social-icon-color: var(--filter-home-logo-hover);
+  --filter-social-icon-hover-color: var(--filter-home-logo);
+  --filter-wheel-color: var(--filter-hairstyles-color);
+
+  /** Nav Colors Overrides **/
+  --nav-info-area-color: var(--content-color-alt);
+  --nav-link-hover-color: var(--content-color);
+
+  /** Header Colors Overrides **/
+  --header-action-menu-color: var(--content-color-alt);
+  --header-action-menu-hover-color: var(--nav-link-hover-color);
+  --header-arrow-color: var(--content-color-alt);
+
+  /** Saying Hello Color Overrids **/
+  --about-water-bottle-stroke-color: var(--content-color-alt);
+
+  /** Career Path Color Overrides **/
+  --career-grid-hair-tagline-color: var(--content-color);
+
+  /** The Personals Color Overrides **/
+  --personals-title-color: var(--content-color);
+  --personals-title-hover-color: var(--content-color-alt);
+
+  /** Downlaod Codebase Color Overrides **/
+  --download-wheel-opacity: 0.8;
+}
+
+html[data-theme='theme-3'] {
+  /** Theme Colors Overrides **/
+  --base-color: #f8f9fa;
+  --base-color-rgb: 248, 249, 250;
+  --base-color-filter: brightness(0) saturate(100%) invert(92%) sepia(52%) saturate(343%)
+    hue-rotate(180deg) brightness(104%) contrast(96%);
+  --content-color: #393644;
+  --content-color-rgb: 57, 54, 68;
+  --content-color-filter: brightness(0) saturate(100%) invert(16%) sepia(11%) saturate(1085%)
+    hue-rotate(212deg) brightness(98%) contrast(82%);
+  --content-color-alt: #be6c7b;
+  --content-color-alt-rgb: 190, 108, 123;
+  --content-color-alt-filter: brightness(0) saturate(100%) invert(56%) sepia(4%) saturate(4122%)
+    hue-rotate(298deg) brightness(87%) contrast(103%);
+
+  /** Text Effects Overrides **/
+  --draw-link-arrow-color: var(--content-color-alt);
+  --text-fx-fill-color: var(--content-color-alt);
+  --text-fx-solid-color: var(--content-color-alt);
+  --text-fx-solid-color-alt: var(--content-color);
+  --text-fx-outline-color: var(--base-color);
+  --text-fx-shadow-color: var(--content-color);
+  --text-fx-link-border-color: var(--content-color-alt);
+  --text-fx-link-stroke-color: var(--content-color-alt);
+  --text-fx-link-stroke-hover-color: var(--base-color);
+
+  /** Filters Overrides **/
+  --filter-hairstyles-color: sepia(100%) hue-rotate(298deg) brightness(140%);
+  --filter-home-logo-overlay: var(--content-color-filter);
+  --filter-home-logo: var(--content-color-alt-filter);
+  --filter-home-logo-overlay-hover: var(--content-color-alt-filter);
+  --filter-home-logo-hover: var(--content-color-filter);
+  --filter-personals-category-color: var(--content-color-filter);
+  --filter-social-icon-color: var(--content-color-alt-filter);
+  --filter-social-icon-hover-color: var(--content-color-filter);
+  --filter-wheel-color: var(--filter-hairstyles-color);
+
+  /** Nav Colors Overrides **/
+  --nav-link-hover-color: var(--content-color);
+  --nav-info-area-color: var(--content-color);
+
+  /** Header Colors Overrides **/
+  --header-action-menu-hover-color: var(--nav-link-hover-color);
+
+  /** Saying Hello Color Overrids **/
+  --about-water-bottle-stroke-color: var(--content-color);
+
+  /** Career Path Color Overrides **/
+  --career-grid-job-title-color: var(--content-color);
+  --career-grid-hair-tagline-color: var(--content-color-alt);
+}
+
+html[data-theme='theme-4'] {
+  /** Theme Colors Overrides **/
+  --base-color: #f8f9fa;
+  --base-color-rgb: 248, 249, 250;
+  --base-color-filter: brightness(0) saturate(100%) invert(90%) sepia(92%) saturate(85%)
+    hue-rotate(72deg) brightness(112%) contrast(95%);
+  --content-color: #282f2c;
+  --content-color-rgb: 40, 47, 44;
+  --content-color-filter: brightness(0) saturate(100%) invert(13%) sepia(3%) saturate(2072%)
+    hue-rotate(102deg) brightness(90%) contrast(84%);
+  --content-color-alt: #3a8255;
+  --content-color-alt-rgb: 58, 130, 85;
+  --content-color-alt-filter: brightness(0) saturate(100%) invert(51%) sepia(8%) saturate(2398%)
+    hue-rotate(90deg) brightness(84%) contrast(92%);
+    --content-color-alt-2: #9ad1ba;
+    --content-color-alt-2-rgb: 154, 209, 186;
+    --content-color-alt-2-filter: brightness(0) saturate(100%) invert(92%) sepia(15%) saturate(587%)
+      hue-rotate(92deg) brightness(86%) contrast(90%);
+
+
+  /** Text Effects Overrides **/
+  --text-fx-fill-color: var(--content-color-alt);
+  --text-fx-solid-color-alt: var(--content-color);
+  --text-fx-solid-color: var(--content-color-alt);
+  --text-fx-outline-color: var(--base-color);
+  --text-fx-shadow-color: var(--content-color-alt);
+
+  /** Filters Overrides **/
+  --filter-hairstyles-color: brightness(200%) sepia(100%) hue-rotate(90deg);
+  --filter-home-logo-overlay: var(--content-color-alt-2-filter);
+  --filter-home-logo: var(--content-color-alt-filter);
+  --filter-home-logo-overlay-hover: var(--content-color-alt-filter);
+  --filter-home-logo-hover: var(--content-color-alt-2-filter);
+  --filter-personals-category-color: var(--content-color-filter);
+  --filter-social-icon-color: var(--filter-home-logo-overlay-hover);
+  --filter-social-icon-hover-color: brightness(0);
+  --filter-wheel-color: var(--filter-hairstyles-color);
+
+  /** Nav Colors Overrides **/
+  --nav-info-area-color: var(--content-color);
+  --nav-link-hover-color: var(--content-color);
+
+  /** Header Colors Overrides **/
+  --header-action-menu-hover-color: var(--content-color-alt-2);
+
+  /** Saying Hello Color Overrids **/
+  --about-water-bottle-stroke-color: var(--content-color);
+
+  /** Career Path Color Overrides **/
+  --career-grid-job-title-color: var(--content-color);
+  --career-grid-hair-tagline-color: var(--content-color-alt);
+
+  /** Downlaod Codebase Color Overrides **/
+  --download-wheel-opacity: 0.8;
+}
+
+html[data-theme='theme-5'] {
+  /** Theme Colors Overrides **/
+  --base-color: #fadf72;
+  --base-color-rgb: 250, 223, 114;
+  --base-color-filter: brightness(0) saturate(100%) invert(87%) sepia(60%) saturate(1570%)
+    hue-rotate(311deg) brightness(116%) contrast(96%);
+  --content-color: #a72d38;
+  --content-color-rgb: 167, 45, 56;
+  --content-color-filter: brightness(0) saturate(100%) invert(22%) sepia(81%) saturate(2214%)
+    hue-rotate(336deg) brightness(75%) contrast(86%);
+  --content-color-alt: #271e1f;
+  --content-color-alt-rgb: 39, 30, 31;
+  --content-color-alt-filter: brightness(0) saturate(100%) invert(10%) sepia(8%) saturate(1224%)
+    hue-rotate(304deg) brightness(97%) contrast(93%);
+  --content-color-alt-2: #347cc0;
+  --content-color-alt-2-filter: brightness(0) saturate(100%) invert(42%) sepia(95%) saturate(398%)
+    hue-rotate(167deg) brightness(88%) contrast(90%);
+
+  /** Global Color Overrides **/
+  --body-text-color: var(--content-color-alt);
+  --copy-color: var(--content-color-alt);
+  --copy-mixin-color-1: var(--content-color);
+  --copy-mixin-color-2: var(--content-color-alt);
+
+  /** Text Effects Overrides **/
+  --text-fx-fill-color: var(--content-color-alt-2);
+  --text-fx-solid-color: var(--content-color-alt-2);
+  --text-fx-solid-color-alt: var(--content-color);
+  --text-fx-outline-color: var(--base-color);
+  --text-fx-shadow-color: var(--content-color);
+  --text-fx-link-border-color: var(--content-color);
+  --text-fx-link-stroke-color: var(--content-color-alt-2);
+  --text-fx-link-stroke-hover-color: var(--base-color);
+
+  /** Filters Overrides **/
+  --filter-hairstyles-color: brightness(100%) sepia(95%) saturate(398%) hue-rotate(167deg);
+  --filter-home-logo-overlay: var(--content-color-filter);
+  --filter-home-logo: var(--content-color-alt-2-filter);
+  --filter-home-logo-overlay-hover: var(--content-color-alt-2-filter);
+  --filter-home-logo-hover: var(--content-color-filter);
+  --filter-personals-category-color: var(--content-color-alt-filter);
+  --filter-social-icon-color: var(--filter-home-logo-overlay);
+  --filter-social-icon-hover-color: var(--content-color-alt-filter);
+  --filter-wheel-color: var(--filter-hairstyles-color);
+
+  /** Nav Colors Overrides **/
+  --nav-link-hover-color: var(--content-color-alt-2);
+
+  /** Header Colors Overrides **/
+  --header-action-menu-hover-color: var(--nav-link-hover-color);
+
+  /** Saying Hello Color Overrids **/
+  --about-water-bottle-stroke-color: var(--content-color);
+
+  /** The Personals Color Overrides **/
+  --personals-link-hover-color: var(--content-color-alt-2);
+
+  /** Downlaod Codebase Color Overrides **/
+  --download-wheel-opacity: 0.8;
+}
+
+html[data-theme='theme-6'] {
+  /** Theme Colors Overrides **/
+  --base-color: #e44b4a;
+  --base-color-rgb: 228, 75, 74;
+  --base-color-filter: brightness(0) saturate(100%) invert(40%) sepia(96%) saturate(1928%)
+    hue-rotate(336deg) brightness(101%) contrast(83%);
+  --content-color: #212529;
+  --content-color-rgb: 33, 37, 41;
+  --content-color-filter: brightness(0) saturate(100%) invert(6%) sepia(3%) saturate(4328%)
+    hue-rotate(169deg) brightness(98%) contrast(82%);
+  --content-color-alt: #f8f9fa;
+  --content-color-alt-rgb: 248, 249, 250;
+  --content-color-alt-filter: brightness(0) saturate(100%) invert(92%) sepia(52%) saturate(343%)
+    hue-rotate(180deg) brightness(104%) contrast(96%);
+
+  /** Global Color Overrides **/
+  --body-text-color: var(--content-color-alt);
+  --copy-color: var(--content-color-alt);
+  --copy-mixin-color-1: var(--content-color);
+  --copy-mixin-color-2: var(--content-color-alt);
+
+  /** Text Effects Overrides **/
+  --draw-link-arrow-color: var(--content-color-alt);
+  --text-fx-fill-color: var(--content-color);
+  --text-fx-solid-color: var(--content-color);
+  --text-fx-solid-color-alt: var(--content-color);
+  --text-fx-outline-color: var(--content-color-alt);
+  --text-fx-shadow-color: var(--content-color);
+  --text-fx-link-border-color: var(--content-color);
+  --text-fx-link-stroke-color: var(--content-color-alt);
+  --text-fx-link-stroke-hover-color: var(--base-color);
+
+  /** Filters Overrides **/
+  --filter-hairstyles-color: brightness(1) sepia(1) grayscale(1);
+  --filter-home-logo-overlay: var(--content-color-alt-filter);
+  --filter-home-logo: var(--content-color-filter);
+  --filter-home-logo-overlay-hover: var(--content-color-filter);
+  --filter-home-logo-hover: var(--content-color-alt-filter);
+  --filter-personals-category-color: var(--content-color-filter);
+  --filter-social-icon-color: var(--filter-home-logo-overlay);
+  --filter-social-icon-hover-color: var(--filter-home-logo);
+  --filter-wheel-color: var(--filter-hairstyles-color);
+
+  /** Nav Colors Overrides **/
+  --nav-link-hover-color: var(--content-color);
+
+  /** Header Colors Overrides **/
+  --header-action-menu-color: var(--content-color-alt);
+  --header-action-menu-hover-color: var(--content-color);
+  --header-arrow-color: var(--content-color-alt);
+
+  /** Saying Hello Color Overrids **/
+  --about-water-bottle-stroke-color: var(--content-color-alt);
+}
+
+html[data-theme='theme-7'] {
+  /** Theme Colors Overrides **/
+  --base-color: #212529;
+  --base-color-rgb: 33, 37, 41;
+  --base-color-filter: brightness(0) saturate(100%) invert(6%) sepia(3%) saturate(4328%)
+    hue-rotate(169deg) brightness(98%) contrast(82%);
+  --content-color: #f69835;
+  --content-color-rgb: 246, 152, 53;
+  --content-color-filter: brightness(0) saturate(100%) invert(67%) sepia(34%) saturate(986%)
+    hue-rotate(341deg) brightness(95%) contrast(103%);
+  --content-color-alt: #e6cd9d;
+  --content-color-alt-rgb: 230, 205, 157;
+  --content-color-alt-filter: brightness(0) saturate(100%) invert(92%) sepia(22%) saturate(693%)
+    hue-rotate(329deg) brightness(96%) contrast(88%);
+  --content-color-alt-2: #f8f9fa;
+  --content-color-alt-2-rgb: 248, 249, 250;
+  --content-color-alt-2-filter: brightness(0) saturate(100%) invert(92%) sepia(52%) saturate(343%)
+    hue-rotate(180deg) brightness(104%) contrast(96%);
+  --nav-bg-border-open-color: 0 0 8px rgba(230, 205, 157, 0.2);
+
+  /** Global Color Overrides **/
+  --body-text-color: var(--content-color-alt-2);
+  --copy-mixin-color-2: var(--content-color-alt-2);
+  --copy-color: var(--content-color-alt-2);
+  --script-color: var(--content-color-alt-2);
+
+  /** Text Effects Overrides **/
+  --text-fx-fill-color: var(--content-color);
+  --text-fx-solid-color: var(--content-color-alt-2);
+  --text-fx-solid-color-alt: var(--content-color);
+  --text-fx-outline-color: var(--base-color);
+  --text-fx-shadow-color: var(--content-color);
+  --text-fx-link-border-color: var(--content-color);
+  --text-fx-link-stroke-color: var(--content-color-alt);
+  --text-fx-link-stroke-hover-color: var(--base-color);
+
+  /** Filters Overrides **/
+  --filter-hairstyles-color: brightness(190%) sepia(90%) hue-rotate(19deg);
+  --filter-home-logo: var(--content-color-alt-2-filter);
+  --filter-home-logo-hover: var(--content-color-alt-filter);
+  --filter-home-logo-overlay: var(--content-color-alt-filter);
+  --filter-home-logo-overlay-hover: var(--content-color-alt-2-filter);
+  --filter-personals-category-color: var(--content-color-alt-filter);
+  --filter-social-icon-color: var(--content-color-alt-filter);
+  --filter-social-icon-hover-color: var(--content-color-alt-2-filter);
+  --filter-wheel-color: var(--filter-hairstyles-color);
+
+  /** Nav Colors Overrides **/
+  --nav-link-hover-color: var(--content-color-alt-2);
+
+  /** Header Colors Overrides **/
+  --header-action-menu-color: var(--content-color-alt);
+  --header-action-menu-hover-color: var(--content-color-alt-2);
+  --header-arrow-color: var(--content-color-alt);
+
+  /** Saying Hello Color Overrids **/
+  --about-water-bottle-stroke-color: var(--content-color-alt);
+
+  /** Career Path Color Overrides **/
+  --career-grid-hair-tagline-color: var(--content-color);
+
+  /** The Personals Color Overrides **/
+  --personals-title-color: var(--content-color);
+  --personals-title-hover-color: var(--content-color-alt-2);
+
+  /** Downlaod Codebase Color Overrides **/
+  --download-wheel-opacity: 0.8;
+}
+
+html[data-theme='theme-8'] {
+  /** Theme Colors Overrides **/
+  --base-color: #f8f9fa;
+  --base-color-rgb: 248, 249, 250;
+  --base-color-filter: brightness(0) saturate(100%) invert(92%) sepia(52%) saturate(343%)
+    hue-rotate(180deg) brightness(104%) contrast(96%);
+  --content-color: #212529;
+  --content-color-rgb: 33, 37, 41;
+  --content-color-filter: brightness(0) saturate(100%) invert(6%) sepia(3%) saturate(4328%)
+    hue-rotate(169deg) brightness(98%) contrast(82%);
+  --content-color-alt: #b29762;
+  --content-color-alt-rgb: 178, 151, 98;
+  --content-color-alt-filter: brightness(0) saturate(100%) invert(70%) sepia(7%) saturate(1972%)
+    hue-rotate(2deg) brightness(86%) contrast(89%);
+
+  /** Text Effects Overrides **/
+  --draw-link-arrow-color: var(--content-color-alt);
+
+  /** Filters Overrides **/
+  --filter-hairstyles-color: brightness(200%) sepia(90%) hue-rotate(2deg);
+  --filter-home-logo: var(--content-color-alt-filter);
+  --filter-home-logo-hover: var(--content-color-filter);
+  --filter-home-logo-overlay: var(--content-color-filter);
+  --filter-home-logo-overlay-hover: var(--content-color-alt-filter);
+  --filter-social-icon-color: var(--content-color-alt-filter);
+  --filter-social-icon-hover-color: var(--content-color-filter);
+  --filter-personals-category-color: var(--content-color-filter);
+  --filter-wheel-color: var(--filter-hairstyles-color);
+
+  /** Nav Colors Overrides **/
+  --nav-link-hover-color: var(--content-color);
+
+  /** Header Colors Overrides **/
+  --header-action-menu-hover-color: var(--content-color-alt);
+
+  /** The Personals Color Overrides **/
+  --personal-logo-opacity: 0.3;
+}
+
+html[data-theme='theme-9'] {
+  /** Theme Colors Overrides **/
+  --base-color: #f8f9fa;
+  --base-color-rgb: 248, 249, 250;
+  --base-color-filter: brightness(0) saturate(100%) invert(92%) sepia(52%) saturate(343%)
+    hue-rotate(180deg) brightness(104%) contrast(96%);
+  --content-color: #212529;
+  --content-color-rgb: 33, 37, 41;
+  --content-color-filter: brightness(0) saturate(100%) invert(6%) sepia(3%) saturate(4328%)
+    hue-rotate(169deg) brightness(98%) contrast(82%);
+  --content-color-alt: #be6c7b;
+  --content-color-alt-rgb: 190, 108, 123;
+  --content-color-alt-filter: brightness(0) saturate(100%) invert(56%) sepia(4%) saturate(4122%)
+    hue-rotate(298deg) brightness(87%) contrast(103%);
+
+  /** Text Effects Overrides **/
+  --draw-link-arrow-color: var(--content-color-alt);
+
+  /** Filters Overrides **/
+  --filter-hairstyles-color: sepia(100%) hue-rotate(298deg) brightness(140%);
+  --filter-home-logo: var(--content-color-alt-filter);
+  --filter-home-logo-hover: var(--content-color-filter);
+  --filter-home-logo-overlay: var(--content-color-filter);
+  --filter-home-logo-overlay-hover: var(--content-color-alt-filter);
+  --filter-social-icon-color: var(--content-color-alt-filter);
+  --filter-social-icon-hover-color: var(--content-color-filter);
+  --filter-personals-category-color: var(--content-color-alt-filter);
+  --filter-wheel-color: var(--filter-hairstyles-color);
+
+  /** Nav Colors Overrides **/
+  --nav-link-hover-color: var(--content-color);
+
+  /** Header Colors Overrides **/
+  --header-action-menu-hover-color: var(--content-color-alt);
+
+  /** The Personals Color Overrides **/
+  --personal-logo-opacity: 0.3;
+}
+
+html[data-theme='theme-10'] {
+  /** Theme Colors Overrides **/
+  --base-color: #f8f9fa;
+  --base-color-rgb: 248, 249, 250;
+  --base-color-filter: brightness(0) saturate(100%) invert(92%) sepia(52%) saturate(343%)
+    hue-rotate(180deg) brightness(104%) contrast(96%);
+  --content-color: #282f2c;
+  --content-color-rgb: 40, 47, 44;
+  --content-color-filter: brightness(0) saturate(100%) invert(13%) sepia(3%) saturate(2072%)
+    hue-rotate(102deg) brightness(90%) contrast(84%);
+  --content-color-alt: #3a8255;
+  --content-color-alt-rgb: 58, 130, 85;
+  --content-color-alt-filter: brightness(0) saturate(100%) invert(51%) sepia(8%) saturate(2398%)
+    hue-rotate(90deg) brightness(84%) contrast(92%);
+  --content-color-alt-2: #9ad1ba;
+  --content-color-alt-2-rgb: 154, 209, 186;
+  --content-color-alt-2-filter: brightness(0) saturate(100%) invert(92%) sepia(15%) saturate(587%)
+    hue-rotate(92deg) brightness(86%) contrast(90%);
+
+  /** Text Effects Overrides **/
+  --draw-link-arrow-color: var(--content-color-alt);
+
+  /** Filters Overrides **/
+  --filter-hairstyles-color: brightness(200%) sepia(100%) hue-rotate(90deg);
+  --filter-home-logo: var(--content-color-alt-2-filter);
+  --filter-home-logo-hover: var(--content-color-filter);
+  --filter-home-logo-overlay: var(--content-color-filter);
+  --filter-home-logo-overlay-hover: var(--content-color-alt-filter);
+  --filter-social-icon-color: var(--content-color-alt-filter);
+  --filter-social-icon-hover-color: var(--content-color-filter);
+  --filter-personals-category-color: var(--content-color-alt-filter);
+  --filter-wheel-color: var(--filter-hairstyles-color);
+
+  /** Nav Colors Overrides **/
+  --nav-link-hover-color: var(--content-color);
+
+  /** Header Colors Overrides **/
+  --header-action-menu-hover-color: var(--content-color-alt);
+
+  /** The Personals Color Overrides **/
+  --personal-logo-opacity: 0.3;
+}
+
+html[data-theme='theme-11'] {
+  /** Theme Colors Overrides **/
+  --base-color: #f8f9fa;
+  --base-color-rgb: 248, 249, 250;
+  --base-color-filter: brightness(0) saturate(100%) invert(92%) sepia(52%) saturate(343%)
+    hue-rotate(180deg) brightness(104%) contrast(96%);
+  --content-color: #01b0d3;
+  --content-color-rgb: 1, 176, 211;
+  --content-color-filter: brightness(0) saturate(100%) invert(70%) sepia(58%) saturate(7498%)
+    hue-rotate(159deg) brightness(103%) contrast(99%);
+  --content-color-alt: #0a4a55;
+  --content-color-alt-rgb: 10, 74, 85;
+  --content-color-alt-filter: brightness(0) saturate(100%) invert(21%) sepia(95%) saturate(427%)
+    hue-rotate(141deg) brightness(88%) contrast(94%);
+
+  /** Global Color Overrides **/
+  --body-text-color: var(--content-color-alt);
+  --copy-color: var(--content-color-alt);
+  --script-color: var(--content-color-alt);
+
+  /** Text Effects Overrides **/
+  --draw-link-arrow-color: var(--content-color-alt);
+  --text-fx-link-border-color: var(--content-color);
+
+  /** Filters Overrides **/
+  --filter-hairstyles-color: brightness(200%) saturate(0%) sepia(100%) saturate(427%)
+    hue-rotate(157deg);
+  --filter-home-logo: var(--content-color-alt-filter);
+  --filter-home-logo-hover: var(--content-color-filter);
+  --filter-home-logo-overlay: var(--content-color-filter);
+  --filter-home-logo-overlay-hover: var(--content-color-alt-filter);
+  --filter-personals-category-color: var(--content-color-alt-filter);
+  --filter-social-icon-color: var(--content-color-alt-filter);
+  --filter-social-icon-hover-color: var(--content-color-filter);
+  --filter-wheel-color: var(--filter-hairstyles-color);
+
+  /** Nav Colors Overrides **/
+  --nav-link-hover-color: var(--content-color);
+
+  /** Header Colors Overrides **/
+  --header-action-menu-hover-color: var(--content-color-alt);
+
+  /** The Personals Color Overrides **/
+  --personal-logo-opacity: 0.3;
+
+  /** Downlaod Codebase Color Overrides **/
+  --download-tagline-color: var(--content-color);
+
+  /** Footer Codebase Color Overrides **/
+  --footer-background-color: var(--content-color-alt);
+}
+
+section[data-theme='theme-1'] {
+  --career-grid-company-asset-path: 'theme-1';
+}
+
+section[data-theme='theme-2'] {
+  --career-grid-company-asset-path: 'theme-2';
+}
+
+section[data-theme='theme-3'] {
+  --career-grid-company-asset-path: 'theme-3';
+}
+
+section[data-theme='theme-4'] {
+  --career-grid-company-asset-path: 'theme-4';
+}
+
+section[data-theme='theme-5'] {
+  --career-grid-company-asset-path: 'theme-5';
+}
+
+section[data-theme='theme-6'] {
+  --career-grid-company-asset-path: 'theme-6';
+}
+
+section[data-theme='theme-7'] {
+  --career-grid-company-asset-path: 'theme-7';
+}
+
+section[data-theme='theme-8'] {
+  --career-grid-company-asset-path: 'theme-7';
+}
+
+section[data-theme='theme-9'] {
+  --career-grid-company-asset-path: 'theme-3';
+}
+
+section[data-theme='theme-10'] {
+  --career-grid-company-asset-path: 'theme-4';
+}
+
+section[data-theme='theme-11'] {
+  --career-grid-company-asset-path: 'theme-8';
+}

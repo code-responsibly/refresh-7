@@ -1,0 +1,1636 @@
+<!--Code Responsibly
+  No Need to dig around! You can download the fully documented code over
+  at https://github.com/code-responsibly/refresh-7 or just visit the Download
+  Codebase section. If you like looking around, there are only two specific
+  use-case selectors typescript checks for to determine extended functionality:
+  'prevent-default' and 'mobile-ready'.
+
+  'mobile-ready' allows for th hover on and off states to be converted to
+  touch so that they work on mobile sized browsers and devices.
+
+  'prevent-default' work exclusively on anchor links and prevent the default
+  action of scrolling from one section to another as is the case with the
+  sports science analytics section (Removed temporarily from this site).
+  
+  Tell your friends, Faisal
+-->
+<!DOCTYPE html>
+<html lang="en" class="one-page-layout" data-theme="theme-0">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no"
+    />
+    <meta name="description" content="The Online Identity of Technology Head, Faisal Ramadan" />
+    <meta name="author" content="Faisal Ramadan" />
+    <meta property="og:image" content="https://coderesponsibly.com/assets/cr-patch.png" />
+    <meta
+      property="og:description"
+      content="Faisal Ramadan is a Computer Scientist with a focus in Leadership and People Development. He is currently Head of Tools & Infrastructure for 3rd Party Ecoystem at Google Inc. in New York City. His passion is sports analytics."
+    />
+    <meta property="og:url" content="https://coderesponsibly.com" />
+    <meta property="og:title" content="The Online Portfolio of Faisal Ramadan" />
+    <title>The Online Identity of Technology Head, Faisal Ramadan</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link href="css/app.min.css?v=1.5" rel="stylesheet" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZPH86Q47T"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-SZPH86Q47T');
+    </script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-587896G');
+    </script>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-587896G"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="fuzzy-cursor"></div>
+    <nav>
+      <div class="nav-wrapper">
+        <div class="nav-info-area nav-info-box-styling">
+          <div class="area-1">
+            <span>Head of Technology</span>
+            <span>Computer Scientist</span>
+          </div>
+        </div>
+        <div class="nav-info-desc nav-info-box-styling">
+          <span>Faisal Ramadan</span>
+          <span>me@coderesponsibly.com</span>
+        </div>
+        <div class="cr-menu">
+          <span aria-hidden="true" class="nav-bg"></span>
+          <a class="burger"><span aria-hidden="true"></span></a>
+          <span class="social-icons">
+            <a href="https://instagram.com/fuzz.and.rougie" target="_blank"
+              ><img src="assets/ig-icon.png"
+            /></a>
+            <a href="https://linkedin.com/" target="_blank"
+              ><img src="assets/linkedin-icon.png"
+            /></a>
+          </span>
+          <ul class="nav-link-styling">
+            <li>
+              <a href="#home" class="active">
+                <svg viewBox="0 0 13 20">
+                  <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                </svg>
+                <span>HOME</span>
+              </a>
+            </li>
+            <li>
+              <a href="#hello">
+                <svg viewBox="0 0 13 20">
+                  <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                </svg>
+                <span>SAYING HELLO</span>
+              </a>
+            </li>
+            <li>
+              <a href="#career-path">
+                <svg viewBox="0 0 13 20">
+                  <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                </svg>
+                <span>ME & MY HAIR'S CAREER PATH</span>
+              </a>
+            </li>
+            <li>
+              <a href="#the-personals">
+                <svg viewBox="0 0 13 20">
+                  <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                </svg>
+                <span>THE PERSONALS</span>
+              </a>
+            </li>
+            <li>
+              <a href="#leadership-philosophy">
+                <svg viewBox="0 0 13 20">
+                  <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                </svg>
+                <span>LEADERSHIP PHILOSOPHY</span>
+              </a>
+            </li>
+            <li>
+              <a href="#download-codebase">
+                <svg viewBox="0 0 13 20">
+                  <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                </svg>
+                <span>DOWNLOAD THE CODEBASE</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://google.com" target="_blank">
+                <svg viewBox="0 0 13 20">
+                  <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                </svg>
+                <span>RESUME | CV</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header id="home" class="panel home" data-theme="theme-1">
+      <div class="hero-container">
+        <div class="hero-y-path">
+          <div class="hero-x-path">
+            <div class="hero-logo darken-effect">
+              <svg
+                id="hero-svg"
+                xmlns="https://www.w3.org/2000/svg"
+                width="466.667"
+                height="446.667"
+                viewBox="0 0 350 335"
+                version="1.0"
+              >
+                <g id="hero-graphic" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <path
+                    d="M236.5 4.1c1.9 5.3 1.9 9.4-.1 15.1-1.7 5.3-7.3 12.2-11.5 14.3-4.9 2.6-5 1.6-.3-2.7 2.5-2.3 5.2-5.8 6.1-7.7 1.6-3.7 2.8-17.1 1.5-17.1-.4.1-2.3 2.4-4.2 5.3-3.9 5.7-11.5 11.4-19.4 14.3-2.8 1-5.5 2.1-6 2.3-.6.2 1.5-2 4.5-5 4.9-4.8 8-9.9 6-9.9-.4 0-2.2 1.1-4.1 2.5-1.9 1.4-6.6 3.5-10.5 4.6-3.8 1.2-7.9 2.5-9 3-1.1.4-6 1.3-11 1.9-22.6 2.8-38.2 5.7-47.6 8.6-8.2 2.6-21.2 9.8-27.9 15.4-4 3.4-13.1 15.8-15.3 21l-1.1 2.5-.4-2.3c-.4-2.8 1.5-8.8 4-12.5 3.7-5.2.7-4.3-4.6 1.4-5.5 5.9-7.4 10.4-8.3 19.8-.3 3.3-1.9 8.5-3.8 12.6-3.7 7.9-6.9 18.1-6 19.5.3.5.1 1.1-.4 1.5-1.3.7-1.3 30.3 0 31 .5.4.7 1 .4 1.5-.3.5.2 3.5 1.1 6.7 2.6 9.5 3.9 13 7.5 21.8.4 1.1 1.5 4 2.3 6.5.8 2.5 2.4 6.7 3.6 9.5 1.2 2.7 2.7 6.3 3.5 8 .7 1.6 2.3 7.4 3.5 12.8 1.5 6.2 2.8 9.7 3.6 9.7 4.2 0 7.5-15.8 5.6-26.8-1-5.9-5.1-17.5-9.9-28.2-2-4.5-2-4.5-3.7-3.1-1.1.9-2.1.5-5.1-2.4l-3.8-3.5.6-10.8c.9-15.1 3.3-22.2 7.5-22.2.9 0 5.7 2 10.9 4.5 5.1 2.5 10.1 4.5 11.1 4.5.9 0 4.5 1.3 7.8 3 3.4 1.6 10.3 4.1 15.5 5.5 5.2 1.5 10.3 3 11.4 3.5 3.7 1.6 6.5 1.8 6.6.7.1-.7 0-2.6-.1-4.4-.1-1.7.8-5 2-7.3 1.1-2.2 3-7.6 4-11.8 1.1-4.3 2.6-9.2 3.5-10.8 2.3-4.7 7.2-9.3 11.8-11.3 7.4-3.2 12.7-3.4 30.8-1.1 15 2 18.4 2.1 27.5 1.1 5.8-.6 13.4-1.8 16.9-2.8 6.2-1.6 6.5-1.6 8.5.2 3.2 2.9 5.1 8.1 5.7 15.7l.6 6.7 3-1.7c5.8-3.3 14.4-12.1 17.4-17.9 4-7.6 5.7-16.6 5-25.3-.6-6.9-4.2-21.7-5.7-23.3-.4-.4-1 1.6-1.3 4.6-.5 5.4-3.3 12.4-4.4 11.3-.4-.3.2-2.4 1.2-4.6 3.5-7.7 1.1-20.8-5.2-28.8-1.8-2.2-1.8-2.1-1.5 5.3.3 4.6-.1 8.7-.8 10.5-1.7 4-3.1 3.8-1.9-.2 4.5-15.8-7.3-38.3-24.8-47.2-4.4-2.2-4.4-2.2-2.8 2.5zM42.1 225.6c-19.2 5.1-35.8 23.2-40.7 44-2.5 11.1-.4 17.8 6.3 19.8 3.6 1.1 3.5-1.1-.2-3.3-3-1.8-3.5-2.5-3.5-5.8.1-26.3 33.8-55.7 56.6-49.3 17.6 5 17.3 30.7-.6 48.9-10.7 10.9-21.7 15.2-25.4 9.9-2.5-3.5-2-6.6 3.5-22 2.9-7.9 6-17.1 6.9-20.5 1.7-5.8 1.7-6.2.1-7.7-1-.9-2.2-1.6-2.8-1.6-.9 0-5.3 8.7-5.3 10.4 0 .2-3.4 7.9-7.5 17.1-7.9 17.4-16.1 40.5-19 53.9l-1.8 8 2.7 2.2c1.4 1.3 3.2 2.1 4 1.8 2.3-.9 5.3-7.7 8.7-19.7 1.8-6.4 3.5-11.7 3.8-11.7.3.1 1.5 2 2.7 4.3 2.4 5 9.2 9.6 15.3 10.4 8.2 1.1 18.8-4.2 19.4-9.7.3-3.7-2.8-3.8-4.7-.2-4.3 8.2-17.7 6.7-23.9-2.7-3.2-4.8-3.3-5.5-.8-4.1 3.5 1.8 10.4 1.1 16-1.6 8.1-4.1 19.4-15.6 23.3-24 3.2-6.6 3.3-7.4 3.3-18.9 0-10.4-.3-12.5-2.2-16.1-6-11.2-19.3-15.8-34.2-11.8z"
+                  />
+                  <path
+                    d="M268.7 235.7c-1.1 1.8-18.5 44.1-19.7 47.8-.7 2.2-2.2 5.1-3.4 6.4-2.2 2.5-10.4 8.1-11.8 8.1-1.4 0-.8-3.3 2.7-14.5 3-9.3 3.3-11.2 2.1-12.4-1.8-1.8-3.3-.8-5 3.4-1.2 2.7-2.9 4.2-8.5 7-3.9 1.9-7.2 3.5-7.5 3.5-.2 0-.9-1.4-1.6-3-1.7-4.1-.6-10.4 2.8-16l2.7-4.5.5 4.9c.8 7.8 2.5 6.6 3.6-2.4 1-8.8.7-9.5-4.1-7.2-7.3 3.6-10.8 9.6-11.1 19.4-.2 6.3-.4 7-4.5 11.7-2.3 2.8-4.6 5.1-5.1 5.1-1.1 0-1.2.6 2.2-9.5 3.4-9.9 3.7-13.3 1.5-14.1-2.6-1-6 2.2-13.6 12.6-4 5.5-7.6 10-8 10-.4 0 .8-4.1 2.7-9 5.1-13.8 5.5-15.8 3.7-17.5-.8-.8-1.8-1.5-2.2-1.5-.5 0-2.3 3.1-4 7-3.2 6.9-3.3 7-7.2 7-4.3 0-4.4-.2-2.8-3.2 1.7-3.2.2-6.8-3.6-8.4-3.1-1.3-3.9-1.3-6.4.1-3.4 1.7-6.7 5.9-7.6 9.8-.8 3.2-1 3.3-5.7 4.2l-3.6.7-.7-4.3c-.9-5.4-5.1-9.9-9.3-9.9-1.7 0-3.2-.6-3.6-1.5-.8-2.2-2.6-1.8-2.6.4 0 3.1-9.8 12-17.2 15.7-3.7 1.9-7 3.4-7.2 3.4-.3 0-1-1.7-1.7-3.9-.9-3.1-.8-4.8.5-9.3.8-3 2.5-6.3 3.6-7.3 2-1.8 2-1.8 2 1.6 0 3.3 1.4 6.9 2.3 5.9.2-.3.9-3.9 1.5-8 .8-5.1.8-7.6.1-8.1-1.6-.9-8.4 2.7-10.8 5.7-2.7 3.4-5.5 12.8-4.8 16.1.9 4.6-7.3 10.3-14.8 10.3-3.3 0-3.5-.2-3.5-3.5 0-3.4.1-3.5 3.9-3.5 9 0 16.3-13.2 9.6-17.6-7.1-4.6-19.5 7.5-19.5 19.1 0 3.8.5 5.2 2.9 7.6 1.9 1.8 4 2.9 5.8 2.9 3.6-.1 9.9-2.9 14-6.4 2.8-2.4 3.4-2.5 3.9-1.2.4 1.2-.9 3.2-4.4 6.5-6.4 6.2-7.5 10.2-3.8 14 2.3 2.2 3.5 2.6 8.5 2.6 4.9 0 6.4-.4 8.5-2.4 3.4-3.2 3.4-8.1.1-13.9l-2.4-4.2 2.2-1.3c1.2-.8 3.4-2.1 4.9-3 3.5-2.1 3.8-2.1 3.8.2 0 1 .8 2.9 1.8 4.1 1.8 2.2 1.7 2.5-.5 10.9-4.3 16-5.7 24.9-4.3 26.6 2.7 3.2 3.1 2.4 6.9-12.5l2.7-10.5 3.2.3c2.5.3 4-.5 7.7-3.9 2.6-2.4 5.8-6.5 7.1-9.1 2-3.9 3.1-4.9 6.4-5.9 4.6-1.4 4.2-1.6 6.1 3.6 2 5.4 5.5 7.1 10.3 5.1 3.9-1.6 7.6-6.7 7.6-10.5 0-1.9.4-2.2 2.3-1.7 1.2.3 2.5.6 2.8.6.4 0 .1 1.7-.7 3.7-2 5.8-1.8 11.7.6 13.8 1.9 1.7 2.1 1.7 4.1-.1 1.2-1 5.4-6.9 9.4-12.9 9.7-14.8 13.3-17.9 7.6-6.7-1.6 3.1-3.4 7.6-4.1 9.9-1.1 3.7-1.1 4.5.4 6.8 2.6 4 5.3 2.9 11-4.7 3.8-5 5.3-6.3 5.9-5.2.6 1-.6 2.8-4.2 6.3-5.4 5.3-7 8.9-5.3 12.6 2.4 5.2 14.8 5.9 18.9 1 3-3.4 2.9-7.1-.2-13-1.4-2.6-2.4-4.8-2.3-4.9 3.1-2.1 10.1-5.7 10.4-5.3.3.2 0 1.6-.6 3.1-1.8 4.7-1.2 12 1 14.4 1.2 1.2 2.4 2.2 2.8 2.2 1.3 0 7.6-4.1 10.4-6.8l2.7-2.5-.5 4.9c-1.1 9.1 4.9 10 8.8 1.3 1.9-3.9 2.8-4.9 4.8-4.9 3.8-.1 10.1-3.4 13.9-7.4 3-3.1 4.1-3.6 8-3.6h4.6l-.3 5.9c-.9 14.6 8.8 17.3 17.3 4.9 3.5-5 4.5-5.2 4.5-.6 0 3.2 4.7 8.8 7.3 8.8 2.6 0 6.7-4.1 9.3-9.2 2.9-5.8 4-5.8 2.4.1-.9 3.5-2.3 5-10.4 10.9-10.1 7.6-16.1 14.2-18.1 19.8-3.6 10.6 5.9 14.6 17 7.2 7.4-4.9 12.8-14.6 14.9-26.3 1.2-7 1.6-7.4 10.2-12.7 4.7-2.8 8.7-5.5 9-6 1.3-2-3.7-.4-9.6 3.1-3.6 2.2-6.8 3.7-7.2 3.4-.5-.2-.8-4.2-.8-8.9 0-11.1-1.9-11.2-5.9-.3-2.2 5.8-8.3 13.9-10.6 13.9-.7 0-1.6-.8-1.9-1.7-1-2.6.4-14 2.5-20 1.8-5.2 1.8-5.3-.2-6.4-2.9-1.5-4.5.2-6.6 7-4.3 14.3-18.3 28.2-18.3 18.3 0-7.7 8-32.2 15.2-46.5 2.3-4.6 2.7-6.2 1.7-7.3-.6-.8-1.8-1.4-2.5-1.4-3.3 0-13.3 21.8-17.4 37.7-1 4.1-1.2 4.3-5 4.3h-4l.6-5.8c.5-4.9.3-6.1-1.6-8.5-2.5-3.1-6.3-3.6-9.8-1.1-3 2.1-2.9 1.3 1.8-14.6 2.9-9.8 3.6-13.7 2.8-14.7-1.2-1.5-2.5-1.7-3.1-.6zM93 268.5c0 4.3-5.4 10.5-9.2 10.5-3 0-2-2.7 2.5-7.5 4.5-4.7 6.7-5.6 6.7-3zm182.4 0c.6 1.8-1.1 7.1-3.5 10.5-1.5 2.2-11.4 6.8-12.5 5.7-.2-.2.6-3.1 1.7-6.6 1.6-4.8 2.9-6.7 5.7-8.6 4.1-2.8 7.7-3.2 8.6-1zM170 274.1c0 2.7-.3 3-2.2 2.4-2-.6-2-.4.6 1.7 2.8 2.4 2.8 2.5 1.2 5.5-3 5.9-8.6 8.1-10.6 4.3-2-3.7 2-13.4 6.8-16.2 3.3-2 4.2-1.5 4.2 2.3zm-29.9-.8c.8 1.7.8 3.5 0 6.4-.9 3.2-2.1 4.6-6.2 7.2-2.8 1.7-5.4 3-5.6 2.7-.9-.9 3.8-16.1 5.4-17.4 2.6-1.9 5.2-1.4 6.4 1.1zm-15.6 9.1c-1.8 4.7-3.5 6-3.5 2.8 0-2.1 3.9-8.7 4.7-7.9.3.3-.3 2.6-1.2 5.1zm140.5 4.1c0 .8-6.1 3.7-6.7 3.2-.3-.3.8-1.2 2.4-2.1 2.9-1.6 4.3-1.9 4.3-1.1zm-160.2 7c2.9 6.4.3 11.5-5.8 11.5-7.1 0-7.7-3.2-1.9-9.5 4.8-5.2 6.1-5.5 7.7-2zm28.2-.6c-1.1 2.1-7 6.7-7 5.5 0-1.1 6.2-7.4 7.2-7.4.5 0 .4.9-.2 1.9zm83.8.6c1.9 4.1 1.5 8.2-1 9.9-2.9 2.1-9.7 2.1-10.4.1-.9-2.4 1.5-7.3 5-10 3.9-3.1 5-3.1 6.4 0zM323 303.8c0 2-5.3 14-7.8 17.6-4.4 6.4-13.9 11.6-15.7 8.6-1.2-1.9 4.8-10.4 13.1-18.8 7.6-7.5 10.4-9.5 10.4-7.4z"
+                  />
+                  <path
+                    d="M239.7 256.7c-1.4 1.3-.6 6 1.2 7.7 2.1 1.9 4.1 1.4 5.9-1.4 1.5-2.5.7-4.4-2.4-5.9-2.9-1.3-3.8-1.4-4.7-.4z"
+                  />
+                </g>
+              </svg>
+              <svg
+                id="hero-overlay-svg"
+                xmlns="https://www.w3.org/2000/svg"
+                width="466.667"
+                height="446.667"
+                viewBox="0 0 350 335"
+                version="1.0"
+              >
+                <g
+                  id="hero-overlay-graphic"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <path
+                    d="M81.6 126.2c-2.3 3.5-5 20.5-4.2 26.2.8 4.8 3.7 9.1 5.9 8.3.7-.2 1.1-1.5.9-2.8-.7-5.4-.6-23.8 0-24.5.5-.4 2.3.1 4.2 1.1 2.8 1.5 3.7 1.6 5 .6.8-.7 2.7-1.6 4.3-2 2.7-.7 2.4-1-5.2-4.6-4.4-2.2-8.3-4.1-8.7-4.3-.4-.2-1.4.7-2.2 2zM258.4 134.6c.3.9.6 2.2.6 3 0 1.1 1.6 1.4 7.3 1.4l7.2-.1-6.8-2.9c-7.9-3.4-9.2-3.6-8.3-1.4zM120.9 143.1c1.2 1.9 2.1 4.2 2.1 5.1 0 1 .8 2.1 1.8 2.6 3.4 1.9 26.3 9.4 26.8 8.9.3-.3.6-2.7.7-5.3l.2-4.7-14.5-4.3c-8-2.4-15.5-4.6-16.8-5l-2.3-.6 2 3.3zM242.5 142.5c-3.3.7-8.8 2.5-12.2 3.9-7.8 3.2-9.3 3.2-21.2-.1-11.9-3.3-27.6-3.6-41.6-.9-12.3 2.4-13.4 3.2-13.4 10 0 3.4.6 5.9 1.4 6.6 1.4 1.1 2 4.2 3 13.5 1.7 17.7 2.9 20.5 10.2 23.7 6.5 2.9 20.9 2.2 28-1.3 5.1-2.5 11.1-9.6 13.1-15.2 8.2-23.4 8.9-24.8 12.4-23.4 1.1.4 1.7 3.1 2.2 10.9.8 12.4 1.9 16.8 5.2 20.7 3.5 4.2 8.2 5.5 16.8 4.6 8.7-.8 14.3-3.1 17.9-7.5 3.5-4.1 5-7.6 9.2-21.8 1.9-6.3 4-12.1 4.9-13 1.9-2.2 2.9-8.3 1.7-10.2-1.4-2.1-29.1-2.5-37.6-.5zM267 149c2.5 3.9-.2 21.4-4.5 30-4.1 8.1-9 11-18.5 11-5.5 0-9.1-1.7-10.7-5.1-2-4.2-3.6-17.4-2.8-23.4.9-7.7 3.4-10.3 12.1-12.6 8.6-2.3 22.9-2.2 24.4.1zm-61.1 3.7c3.3 2.5 3.8 7.7 1.6 16.3-4.9 18.8-12.4 26-27.6 26.3-6.4.2-7 0-9.9-2.9-3-2.9-3.2-3.8-4.7-16.4-1.1-10.4-1.2-14.3-.4-17.2 2-6.6 9.5-8.9 27.5-8.4 8.8.3 11.3.7 13.5 2.3zM111.1 222.8c-5.3 2.7-7.2 6-7.8 13.8-.3 3.8-.9 7.4-1.4 7.9-.4.6-.4 1.7.1 2.5.6.8 1 4.1 1 7.3 0 8.4 2 12.4 7.4 14.7 7.1 3.2 9.9 3.4 14.9 1.2 5.2-2.3 7.2-5.4 8-12.5.5-4.7.4-4.9-1.9-4.4-1.4.2-2.7 0-3-.4-.3-.5-1.8-.9-3.3-.9-2.6 0-2.7.2-2.7 4.7l.1 4.8h-4c-3.8 0-4-.2-4.9-3.8-.7-2.5-.6-5.2.1-7.8.7-2.7.7-5.1 0-7.7-2.2-8.3 1.5-14.8 7.1-12.3 2.2 1.1 2.4 1.6 1.9 5.7l-.5 4.6 3.2-.6c1.7-.3 4.2-.7 5.6-.9 2.3-.2 2.5-.5 2.1-4.7-.4-5.8-2.4-9.6-6.1-11.5-3.9-2-11.7-1.9-15.9.3zM148.1 222.8c-5.3 2.7-7.2 6-7.8 13.8-.3 3.8-1 7.4-1.5 8.1-.5.6-.5 1.3 0 1.7.5.3 1.2 4 1.5 8.2.7 8.9 2.3 11.9 8.3 14.8 4.9 2.5 8.8 2.5 13.9.1 5.9-3 8.5-7.5 8.5-14.9 0-3.4.5-6.7 1.1-7.3.8-.8.8-1.7 0-3.1-.6-1.1-1.1-4.4-1.1-7.2 0-7.2-2.3-11.5-7.4-14-5.2-2.5-11-2.6-15.5-.2zm10.7 7.8c1.8 1.3 2.2 2.5 2.2 7.3 0 3.1-.5 6.2-1.2 6.9-.9.9-.9 1.5 0 2.4 1.8 1.8 1.5 11.3-.4 13.2-2 2.1-5.8 2-7.5 0-1.7-2-1.8-11.9-.1-13.6.9-.9.9-1.5 0-2.6-.7-.7-1.2-3.6-1.2-6.4 0-4.1.5-5.4 2.3-6.9 2.8-2.3 3.1-2.3 5.9-.3zM178.6 221.8c-.3.5-.1 2.4.5 4.1.7 1.9.9 6.2.5 10.9-.3 4.2-.6 8.8-.5 10.2.5 7.4.3 17.8-.4 20.2-.7 2.2-.5 2.7 1.2 3.3 1.1.3 2.9.1 4.1-.5 1.6-.8 3.3-.7 7.4.6 5.3 1.7 5.5 1.7 11.1-.6 7-2.8 8.5-5.5 8.5-14.8 0-3.9.5-7.3 1.2-8 .9-.9.9-1.5 0-2.4-.7-.7-1.2-4.2-1.2-8.9 0-6.1-.4-8.1-2-10.2-2.8-3.6-8-5-15.4-4.3-7.7.8-7.5.8-11.2 0-1.8-.3-3.4-.2-3.8.4zm20.6 8.9c1.3 1.2 1.8 3.1 1.8 7.4 0 3.2-.5 6.1-1 6.4-.7.4-.7 1.2 0 2.5.5 1 1 4.6 1 7.9 0 5.3-.3 6.3-2.4 7.6-2.3 1.6-5.4 1.1-6.8-.9-1.1-1.6-1-12.4.2-14.6.7-1.3.7-2.1 0-2.5-.5-.3-1-3.5-1-7 0-5 .4-6.6 1.8-7.4 2.5-1.5 4.3-1.3 6.4.6zM218.6 221.8c-.3.5-.1 2.4.5 4.1.7 1.9.9 6.2.5 10.9-.3 4.2-.6 8.8-.5 10.2.5 7.2.3 17.8-.4 20.2-.6 2.4-.4 2.8 1.7 3.4 1.4.3 3.3.1 4.2-.4 1.3-.7 2.7-.6 4.8.5 2.6 1.3 3.4 1.3 8.3-.2 2.9-.9 6.3-1.5 7.3-1.2 1.8.5 2 0 2-4.2 0-5.9-1.5-7.7-4.3-5-2.3 2.2-8.6 2.6-10.5.7-2-2-1.5-8.5.8-10.8 2.4-2.4 3.6-2.5 7.4-.5 1.5.8 2.9 1.5 3 1.5.1 0 .2-2.3.2-5 0-4.8-.7-6.2-2.1-4-.3.5-2.4 1-4.5 1-4.5 0-6-1.8-6-7.4 0-6.4 4.6-8.3 10.9-4.5 4.1 2.5 5.1 1.5 5.1-4.7v-4.1l-4.7-.3c-4.6-.2-12.9-.3-15.5-.1-.7.1-2.7-.1-4.4-.5-1.8-.3-3.4-.2-3.8.4z"
+                  />
+                </g>
+              </svg>
+              <img class="hero-img-overlay" src="assets/cr-logo-2.png" />
+              <img class="hero-img" src="assets/cr-logo-1.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="intro-line">
+        <div class="intro-line-container take-action-styling">
+          <a href="#hello">
+            <svg viewBox="0 0 13 20">
+              <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+            </svg>
+            <span>GET Acquainted</span>
+          </a>
+          <span>|</span>
+          <a href="https://google.com" target="_blank">
+            <span>Resume</span>
+            <svg viewBox="0 0 13 20">
+              <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+            </svg>
+          </a>
+        </div>
+        <div class="arrow-wrapper">
+          <div class="arrow-wrapper-inner">
+            <div class="scroll-down-container">
+              <span class="arrow-down"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel about" data-theme="theme-1">
+      <div class="cr-box row-container">
+        <div id="hello" class="copy-section">
+          <div class="copy-mixin">
+            <p class="header-styling-XL">
+              HELLO, I'm <span class="reverse-dashed-drop-shadow">Faisal</span
+              ><span class="inline-script-it">(fie-zel)</span>
+            </p>
+          </div>
+          <div class="copy-mixin">
+            <p class="header-styling-M">
+              A Computer Scientist based in
+              <span class="text-mixin-styling">New York City</span>. I'm currently Head of
+              <span class="inline-wave-text fx-bottle-31" data-text="Tools">Tools</span>
+              <span class="dashed-drop-shadow">&</span>
+              <span class="inline-wave-text fx-bottle-42" data-text="Infrastructure"
+                >Infrastructure</span
+              >
+              for The Ads 3rd Party Ecosystem
+              <span class="text-mixin-styling">at Google Inc.</span>
+            </p>
+          </div>
+
+          <div class="copy-paragraph-container">
+            <p class="section-text section-text-styling">
+              Today I lead a team of engineers to deliver
+              <span class="script-it">global-scale-sized application</span> to millions of users
+              around the world. <br /><br />With over 12 years of experience, I've had the
+              opportunity of
+              <span class="script-it"
+                >leading the technical direction of digital, interactive experiences
+              </span>
+              for world-recognized global brands while working at award winning agencies such as
+              <a class="overlay-link-text" href="https://mrmworldwide.com" target="_blank"
+                >MRM WORLDWIDE</a
+              >,
+              <a class="overlay-link-text" href="https://rokkan.com" target="_blank">ROKKAN,</a>
+              etc.
+            </p>
+            <p class="section-text section-text-styling">
+              My current focus is
+              <span class="script-it">leadership development & scaling technical teams</span> to
+              shape and execute vision, innovating on solutions for everyday problems in the digital
+              space. <br /><br />My passion is
+              <span class="script-it">sports science analytics</span>
+              where I spend my free time forecasting and modeling data to deliver predictive
+              analysis of how on-field athlete performance is impacted by a wide series of
+              day-to-day, off the field behavioral data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel work-history" data-theme="theme-1">
+      <div class="cr-box">
+        <div id="career-path" class="copy-headline copy-mixin">
+          <p class="header-text header-styling-L">
+            ME & MY HAIR'S CAREER PATH
+            <span class="inline-script-it">(At A Glance)</span>
+          </p>
+        </div>
+
+        <div class="grid-wrapper">
+          <article class="job--1 job-grid-styling">
+            <h3>2022-2020</h3>
+            <div class="new-job-holder">
+              <div class="company-img-container">
+                <img data-source="google.jpg" alt="Google Inc." />
+                <img data-source="google-b.jpg" alt="Google Inc." />
+              </div>
+              <p>
+                Head of Tools & Infrastructure<span class="script-it-new-line"
+                  >3rd Party Ecosystem</span
+                >
+              </p>
+            </div>
+          </article>
+          <article class="job--2 job-grid-styling">
+            <div class="hairstyle-holder hairstyle-box-styling">
+              <img src="assets/work-history/hairstyles/hair-0-b.png" alt="hairstyle" />
+              <p>Cleaned it up a bit and let the sides grow out. Ultra Low Tape-up.</p>
+            </div>
+          </article>
+          <article class="job--3 job-grid-styling">
+            <h3>2020 - 2017</h3>
+            <div class="new-job-holder">
+              <div class="company-img-container">
+                <img data-source="google.jpg" alt="Google Inc." />
+                <img data-source="google-c.jpg" alt="Google Inc." />
+              </div>
+              <p>
+                Manager III, Tech Lead<span class="script-it-new-line"
+                  >Partner Solution Engineering</span
+                >
+              </p>
+            </div>
+          </article>
+          <article class="job--4 job-grid-styling">
+            <h3>2017 - 2015</h3>
+            <div class="new-job-holder">
+              <div class="company-img-container">
+                <img data-source="google.jpg" alt="Google Inc." />
+                <img data-source="google-a.jpg" alt="Google Inc." />
+              </div>
+              <p>
+                Manager II, Product Technology Lead<span class="script-it-new-line"
+                  >Technical Solutions & Insights</span
+                >
+              </p>
+            </div>
+          </article>
+
+          <article class="job--5 job-grid-styling">
+            <div class="hairstyle-holder hairstyle-box-styling">
+              <img src="assets/work-history/hairstyles/hair-1-b.png" alt="hairstyle" />
+              <p>
+                Big on the top, but got a ton of grief for the front curl. Moved from pomade to hair
+                spray to keep that kiss curl under control.
+              </p>
+            </div>
+          </article>
+          <article class="job--6 job-grid-styling">
+            <h3>2015 - 2014</h3>
+            <div class="new-job-holder">
+              <div class="company-img-container">
+                <img data-source="google.jpg" alt="Google Inc." />
+                <img data-source="google-a.jpg" alt="Google Inc." />
+              </div>
+              <p>
+                Manager I, Technical Solution Consultant<span class="script-it-new-line"
+                  >Creative Innovation Services</span
+                >
+              </p>
+            </div>
+          </article>
+          <article class="job--7 job-grid-styling">
+            <div class="dual-col-container">
+              <div class="hairstyle-holder dual-item hairstyle-box-styling">
+                <img src="assets/work-history/hairstyles/hair-2-b.png" alt="hairstyle" />
+                <p>
+                  This hairstyle really did wonders for me. Pinch of Pomade and a 3 lap finger run
+                  through it.
+                </p>
+              </div>
+              <div class="dual-item">
+                <h3>2014-2011</h3>
+                <p>
+                  A good chunk of time coding my heart out through a number of various dev/eng roles
+                  at The Goog.
+                </p>
+              </div>
+            </div>
+          </article>
+          <article class="job--8 job-grid-styling">
+            <h3>2011 - 2010</h3>
+            <div class="new-job-holder">
+              <div class="company-img-container">
+                <img data-source="mrm.jpg" alt="MRM Worldwide" />
+                <img data-source="mrm-a.jpg" alt="MRM Worlwwide" />
+              </div>
+              <p>Lead Interactive Applications Architect</p>
+            </div>
+          </article>
+          <article class="job--9 job-grid-styling">
+            <div class="hairstyle-holder hairstyle-box-styling">
+              <img src="assets/work-history/hairstyles/hair-3-b.png" alt="hairstyle" />
+              <p>
+                Full transitioned from mousse-based products to matte pomade, the start of the
+                flair.
+              </p>
+            </div>
+          </article>
+          <article class="job--10 job-grid-styling">
+            <h3>2010 - 2008</h3>
+            <div class="new-job-holder">
+              <div class="company-img-container">
+                <img data-source="rokkan.jpg" alt="Rokkan" />
+                <img data-source="rokkan-a.jpg" alt="Rokkan" />
+              </div>
+              <p>Senior Frontend Developer</p>
+            </div>
+          </article>
+          <article class="job--11 job-grid-styling">
+            <h3>2008 - 2006</h3>
+            <div class="new-job-holder">
+              <div class="company-img-container">
+                <img data-source="ids.jpg" alt="ID Society" />
+                <img data-source="ids-a.jpg" alt="ID Society" />
+              </div>
+              <p>Senior Frontend Developer</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel personals" data-theme="theme-1">
+      <div class="cr-box">
+        <div id="the-personals" class="copy-headline copy-mixin">
+          <p class="header-text header-styling-L">
+            THE PERSONALS
+            <span class="inline-script-it">(Get To Know a Fella)</span>
+          </p>
+        </div>
+
+        <div class="row-container column-grid">
+          <div class="info-column">
+            <span class="grid-box-category-styling">Watch</span>
+            <span class="grid-box-header-styling">
+              Worst <span class="fx-sunrise" data-text="Bad Guys">Bad Guys</span> of All Time</span
+            >
+            <ol class="grid-box-item-styling">
+              <li>
+                <a
+                  href="https://www.looper.com/464834/the-untold-truth-of-skeletor/"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Skeletor</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.ign.com/lists/top-100-villains/1#:~:text=Darth%20Vader%20is%20the%20most,franchises%20in%20modern%20movie%20history."
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Darth Vader</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Cobra_Commander"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Cobra Commander</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.mensjournal.com/entertainment/25-most-physically-dominant-movie-villains-all-time/ivan-drago/"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Ivan Drago</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.denofgeek.com/movies/why-hans-gruber-remains-the-greatest-action-movie-villain-of-all-time/"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Hans Gruber</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="info-column">
+            <span class="grid-box-category-styling">Watch</span>
+            <span class="grid-box-header-styling"
+              >Favorite <span class="fx-sunrise" data-text="TV Shows">TV Shows</span></span
+            >
+            <ol class="grid-box-item-styling">
+              <li>
+                <a
+                  href="https://www.vox.com/culture/2017/6/5/15730378/the-leftovers-finale-review-best-series-ever"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>The Leftovers</span>
+                      <span>The Leftovers</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.rottentomatoes.com/tv/boardwalk-empire"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Boardwalk Empire</span>
+                      <span>Boardwalk Empire</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://mashable.com/article/hbo-scenes-from-a-marriage-review"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Scenes From A Marraige</span>
+                      <span>Scenes From A Marraige</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://filmdaily.co/reviews/wtn/peaky-blinders/"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Peaky Blinders</span>
+                      <span>Peaky Blinders</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.theringer.com/tv/2021/3/3/22310940/snowfall-season-4-behind-the-scenes-underrated-the-wire"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Snowfall</span>
+                      <span>Snowfall</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="info-column">
+            <span class="grid-box-category-styling">Groans</span>
+            <span class="grid-box-header-styling"
+              >Biggest <span class="fx-sunrise" data-text="Pet Peeves">Pet Peeves</span></span
+            >
+            <ol class="grid-box-item-styling">
+              <li>
+                <a
+                  href="https://medium.com/illumination/your-yawning-makes-me-want-to-punch-you-f67eb1093ae8"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>The Loud Yawn</span>
+                      <span>The Loud Yawn</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://medium.com/falling-into-freelancing/people-who-give-unsolicited-advice-secretly-want-one-thing-3db73d4e6114"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Unsolicited Advice</span>
+                      <span>Unsolicited Advice</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.mic.com/articles/73857/an-open-letter-to-anyone-who-thinks-it-s-ok-to-clip-fingernails-in-public"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Nail Clippings in Public</span>
+                      <span>Nail Clippings in Public</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://examples.yourdictionary.com/articles/who-coined-the-phrase-it-is-what-it-is.html"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Phrase Fillers</span>
+                      <span>Phrase Fillers</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.healthline.com/health/sneezing-into-elbow"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>The Hand Sneeze</span>
+                      <span>The Band Sneeze</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="info-column">
+            <span class="grid-box-category-styling">Eat</span>
+            <span class="grid-box-header-styling"
+              >Favorite <span class="fx-sunrise" data-text="Restaurants">Restaurants</span></span
+            >
+            <ol class="grid-box-item-styling">
+              <li>
+                <a
+                  href="https://www.donuts4dinner.com/2016/09/28/bowery-meat-company-is-weirdly-worth-the-money/"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Bowery Meat Company - NYC</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.theskinnypignyc.com/2022/03/4-charles-prime-rib-burger-or-french-dip/"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>4 Charles Prime Rib - NYC</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.theinfatuation.com/new-york/reviews/sushi-nakazawa"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Sushi Nakazawa - NYC</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.insider.com/joes-stone-crab-restaurant-review-miami-2022-2"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Joe's Stone Crab - Miami</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.latimes.com/food/story/2019-09-18/republique-walter-margarita-manzke-hancock-park-review-bill-addison"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>République - L.A.</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="info-column">
+            <span class="grid-box-category-styling">Eat</span>
+            <span class="grid-box-header-styling"
+              >Favorite <span class="fx-sunrise" data-text="Breakfasts">Breakfasts</span></span
+            >
+            <ol class="grid-box-item-styling">
+              <li>
+                <a href="https://johnysluncheonette.com/" target="_blank" class="fx-link-rollup">
+                  <span>
+                    <div>
+                      <span>Johnnys Luncheonette Chelsea</span>
+                      <span>Johnnys Luncheonette Chelsea</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.nytimes.com/2013/12/29/nyregion/a-diner-where-worlds-collide.html"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Hector's Cafe & Diner LWS </span>
+                      <span>Hector's Cafe & Diner LWS</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.ijustwanttoeat.com/post/restaurant-review/french-cafe-henri-long-island-city-queens"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Cafe Henri LIC</span>
+                      <span>Cofe Henri LIC</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.likealocalguide.com/paris/hardware-societe"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>The Hardware Société Paris</span>
+                      <span>The Hardware Société Paris</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.timeout.com/sydney/restaurants/the-nine"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>The Nine Sydney, AU</span>
+                      <span>The Nine Sydney, AU</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="info-column">
+            <span class="grid-box-category-styling">Eat</span>
+            <span class="grid-box-header-styling"
+              >Favorite <span class="fx-sunrise" data-text="Burgers">Burgers</span></span
+            >
+            <ol class="grid-box-item-styling">
+              <li>
+                <a
+                  href="https://www.mensjournal.com/food-drink/is-this-really-americas-best-cheeseburger-w504770/"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>4 Charles Prime Rib NYC</span>
+                      <span>4 Charles Prime Rib NYC</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.johnnyprimesteaks.com/black-tap-craft-burgers-beer/"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Black Tap Craft Burgers & Beer</span>
+                      <span>Black Tap Craft Burgers & Beer</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.theinfatuation.com/new-york/reviews/harlem-shake-nyc"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Harlem Shake Burgers</span>
+                      <span>Harlem Shake Burgers</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://ny.eater.com/2019/10/3/20895447/red-hook-tavern-best-burgers-nyc-restaurants"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Red Hook Tavern</span>
+                      <span>Red Hook Tavern</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://ny.eater.com/2015/8/31/9204733/raouls-burger-review"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Raoul's Burger Au Poivre</span>
+                      <span>Raoul's Burger Au Poivre</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="info-column">
+            <span class="grid-box-category-styling">Tech</span>
+            <span class="grid-box-header-styling"
+              >Favorite <span class="fx-sunrise" data-text="Libraries">Libraries</span></span
+            >
+            <ol class="grid-box-item-styling">
+              <li>
+                <a href="https://threejs.org/" target="_blank" class="draw-link-arrow">
+                  <span>Three.JS</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://pixijs.com/" target="_blank" class="draw-link-arrow">
+                  <span>Pixi.JS</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.theatrejs.com/" target="_blank" class="draw-link-arrow">
+                  <span>Theatre.JS</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://d3js.org/" target="_blank" class="draw-link-arrow">
+                  <span>D3</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://firebase.google.com/" target="_blank" class="draw-link-arrow">
+                  <span>Google Firebase</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="info-column">
+            <span class="grid-box-category-styling">Tech</span>
+            <span class="grid-box-header-styling"
+              >Favorite <span class="fx-sunrise" data-text="Algorithms">Algorithms</span></span
+            >
+            <ol class="grid-box-item-styling">
+              <li>
+                <a
+                  href="https://algobeans.com/2021/03/29/random-forest-tutorial-predicting-goals-in-football/"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Random Forest: Predicting Soccer Goals</span>
+                      <span>Random Forest: Predicting Soccer Goals</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/God%27s_algorithm"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>God's Algorithm</span>
+                      <span>God's Algorithmr</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://en.wikipedia.org/wiki/Particle_swarm_optimization"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Particle Swarm Optimization</span>
+                      <span>Particle Swarm Optimization </span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://towardsdatascience.com/k-means-clustering-algorithm-applications-evaluation-methods-and-drawbacks-aa03e644b48a"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>K-Means Algorithm</span>
+                      <span>K-Means Algorithm</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.geeksforgeeks.org/sarsa-reinforcement-learning/"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>SARSA Reinforcement Learning</span>
+                      <span>SARSA Reinforcement Learning</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="info-column">
+            <span class="grid-box-category-styling">Read</span>
+            <span class="grid-box-header-styling"
+              >Favorite <span class="fx-sunrise" data-text="Authors">Authors</span></span
+            >
+            <ol class="grid-box-item-styling">
+              <li>
+                <a
+                  href="https://www.newyorker.com/magazine/2019/04/01/keeping-up-with-amy-hempel"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Amy Hempel</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://catapult.co/dont-write-alone/stories/andrew-sean-greer-is-challenging-the-great-american-novel-less-is-lost"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Andrew Sean Greer</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="chuckpalahniuk.net" target="_blank" class="draw-link-arrow">
+                  <span>Chuck Palahniuk</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.thefp.com/p/bret-easton-elliss-great-defense"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Bret Easton Ellis</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.davidsedarisbooks.com/"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>David Sedaris</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="info-column">
+            <span class="grid-box-category-styling">Move</span>
+            <span class="grid-box-header-styling"
+              >Favorite
+              <span class="fx-sunrise" data-text="Anti-Sedentary">Anti-Sedentary</span> Gear</span
+            >
+            <ol class="grid-box-item-styling">
+              <li>
+                <a
+                  href="https://www.workwhilewalking.com/fluidstance-level-balance-board-review"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Fluidstance Balance Board</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.gadgetreview.com/office-wobble-stool-chair-standing-desk-chair-review"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Wobble Stool Chair</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.androidauthority.com/varidesk-pro-plus-36-review-1151990/"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Varidesk Pro Plus 36</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.seriousinsights.net/obvus-solutions-minder-laptop-tower-stand-2/"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>obVus Laptop Tower Stand 2.0</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tomsguide.com/reviews/vari-electric-standing-desk"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Vari Electric Standing Desk</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="info-column">
+            <span class="grid-box-category-styling">Travel</span>
+            <span class="grid-box-header-styling"
+              >Favorite <span class="fx-sunrise" data-text="Cities">Cities</span></span
+            >
+            <ol class="grid-box-item-styling">
+              <li>
+                <a
+                  href="https://www.luxurytraveladvisor.com/destinations/15-reasons-why-sydney-greatest-city-world"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Sydney, AU</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://theculturetrip.com/europe/united-kingdom/england/london/articles/13-reasons-why-london-is-the-greatest-city-on-earth/?utm_source=facebook&utm_medium=facebook&utm_campaign=06022017lovelondon"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>London, UK</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.discoverlosangeles.com/why-la-7-reasons-to-choose-los-angeles"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Los Angeles, USA</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://theculturetrip.com/middle-east/united-arab-emirates/articles/8-reasons-why-you-should-visit-dubai-at-least-once-in-your-lifetime/"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Dubai, UAE</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.ign.com/wikis/red-dead-redemption-2/Saint_Denis"
+                  target="_blank"
+                  class="draw-link-arrow"
+                >
+                  <span>Saint Denis, Lemoyne</span>
+                  <svg viewBox="0 0 13 20">
+                    <polyline points="0.5 19.5 3 19.5 12.5 10 3 0.5" />
+                  </svg>
+                </a>
+              </li>
+            </ol>
+          </div>
+
+          <div class="info-column">
+            <span class="grid-box-category-styling">Sports</span>
+            <span class="grid-box-header-styling"
+              >Favorite <span class="fx-sunrise" data-text="Athletes">Athletes</span></span
+            >
+            <ol class="grid-box-item-styling">
+              <li>
+                <a
+                  href="https://www.theatlantic.com/entertainment/archive/2016/10/sandy-koufax/503036/"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Sandy Koufax</span>
+                      <span>Sandy Koufax</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.kiro7.com/sports/mlb/seattle-mariners/espn-names-griffey-jr-13th-greatest-mlb-player-all-time/JZDO35ZROJCC3ELMUA2JQERSHY/"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Ken Griffey Jr.</span>
+                      <span>Ken Griffey Jr.</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.planetfootball.com/quick-reads/kylian-mbappe-records-goals-champions-league-france-world-cup-messi-ronaldo/"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Mbappe</span>
+                      <span>Mbappe</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.atptour.com/en/news/celebrating-nadal-record-21-grand-slam-titles"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Rafa Nadal</span>
+                      <span>Rafa Nadal</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://howtheyplay.com/team-sports/The-Case-for-Pete-Rose"
+                  target="_blank"
+                  class="fx-link-rollup"
+                >
+                  <span>
+                    <div>
+                      <span>Pete Rose</span>
+                      <span>Pete Rose</span>
+                    </div>
+                  </span>
+                </a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel rules container-flush" data-theme="theme-1">
+      <div class="cr-box">
+        <div id="leadership-philosophy" class="copy-headline copy-mixin">
+          <p class="header-text header-styling-L">
+            LEADERSHIP PHILOSOPHY
+            <span class="inline-script-it">(MY 9 RULES)</span>
+          </p>
+        </div>
+
+        <div class="rules-list">
+          <div class="rules-item">
+            <div class="rules-column-wrapper">
+              <div class="rules-item-headline big-list-headline-styling">
+                <span>YOU DON'T HAVE TO BE A MANAGER TO BE A LEADER</span>
+              </div>
+              <div class="rules-item-copy big-list-copy-styling">
+                <p>
+                  As I began to focus more on creating leaders out of individual contributors, I
+                  learned the biggest misconception for others was the idea that they too needed
+                  direct reports. There’s an individual I worked with a few roles ago who
+                  desperately wanted to be a manager, but eventually realized that as a leader there
+                  was much more flexibility in rallying individuals behind his initiative. By having
+                  managers as sponsors, he was able to create efforts that elevate himself first and
+                  others along for the ride, as opposed to elevating others first and foremost in a
+                  management role. He would bring similar job functions together through all these
+                  grass roots efforts, maneuvering between cross-functional teams to move the needle
+                  in his direction. He became a master of the art of persuasion, and everything this
+                  individual thought he loved about management, turned out to be the very things he
+                  really loved about leadership without the responsibility and overhead.
+                </p>
+              </div>
+            </div>
+            <div class="rules-item-index big-list-index-styling">
+              <svg>
+                <text x="0" y="0" dominant-baseline="hanging">.1</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="rules-item">
+            <div class="rules-item-index big-list-index-styling">
+              <svg>
+                <text x="0" y="0" dominant-baseline="hanging">.2</text>
+              </svg>
+            </div>
+            <div class="rules-column-wrapper">
+              <div class="rules-item-headline big-list-headline-styling">
+                <span>NOTHING SHOULD TAKE LONGER THAN HIGH SCHOOL</span>
+              </div>
+              <div class="rules-item-copy big-list-copy-styling">
+                <p>
+                  A mentor of mine starts these business ventures at what feels like every other
+                  month. When I asked how he knew when it was time to close the book on one project
+                  and start something new, his response was, “keep a consistent process with a
+                  defined timeline.” It takes a year and half to bring an idea to market, another
+                  year and half to improve and scale it, and then a year to give it to someone else
+                  to run. If our goals are designed to improve ourselves and our situation, whether
+                  it be starting a new company, completing a screenplay, or recording an album,
+                  nothing we start should take more than 4 years.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rules-item">
+            <div class="rules-column-wrapper">
+              <div class="rules-item-headline big-list-headline-styling">
+                <span>FAIL FIRST, AND FAIL FAST</span>
+              </div>
+              <div class="rules-item-copy big-list-copy-styling">
+                <p>
+                  A buddy of mine has been perfecting his magna opus for 7 years and no one has ever
+                  read it. Moving forward and attaining a successful outcome requires putting
+                  yourself and your work out there, to let it be torn apart. Otherwise nothing is
+                  ever actually awesome, or awful. We get in our own way and the same applies for
+                  the excuses we make to NOT fail first, not fail fast at our jobs and the side
+                  hustles. Whatever it is, get it done as soon as possible, get it in front of
+                  others and relish in the moment anyone tells you that “it needs work.”
+                </p>
+              </div>
+            </div>
+            <div class="rules-item-index big-list-index-styling">
+              <svg>
+                <text x="0" y="0" dominant-baseline="hanging">3.</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="rules-item">
+            <div class="rules-item-index big-list-index-styling">
+              <svg>
+                <text x="0" y="0" dominant-baseline="hanging">.4</text>
+              </svg>
+            </div>
+            <div class="rules-column-wrapper">
+              <div class="rules-item-headline big-list-headline-styling">
+                <span>ALWAYS TAKE A JOB YOU CAN 'BARELY', JUST BARELY DO</span>
+              </div>
+              <div class="rules-item-copy big-list-copy-styling">
+                <p>
+                  I constantly meet talent under 35 that have somehow managed to be in the same job
+                  for 10+ years. And even more strange, these individuals have no intentions of ever
+                  leaving their company or switching roles. Job Security is everything to them.
+                  You’re wasting time applying to a role where you easily check off all the
+                  requirements of the application. Go after the roles where you meet the minimum
+                  requirements and barely meet any of the desired ones. Even better, apply for the
+                  position you're passionate about and meet 30% of the minimum requirements. You’ll
+                  be surprised when you don’t short change yourself.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rules-item">
+            <div class="rules-column-wrapper">
+              <div class="rules-item-headline big-list-headline-styling">
+                <span>WORK WITH PEOPLE YOU WOULD NEVER HANG OUT WITH</span>
+              </div>
+              <div class="rules-item-copy big-list-copy-styling">
+                <p>
+                  There’s an expression out there, “Great talent knows great talent.” This may be
+                  true, but in my experience great talent doesn't refer great talent, they usually
+                  refer their friends. The problem with this isn’t that your friends suck; it’s that
+                  your ideas become stale. You’re too comfortable around them, and eventually the
+                  lines just blur. I once asked my manager on his last day of the job if he had any
+                  advice for me. He said, “I hired you because I knew we’d never have the same idea
+                  and we’d rarely agree on the same thing, and I was right. Don’t hire someone like
+                  you, hire someone like me.”
+                </p>
+              </div>
+            </div>
+            <div class="rules-item-index big-list-index-styling">
+              <svg>
+                <text x="0" y="0" dominant-baseline="hanging">.5</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="rules-item">
+            <div class="rules-item-index big-list-index-styling">
+              <svg>
+                <text x="0" y="0" dominant-baseline="hanging">6.</text>
+              </svg>
+            </div>
+            <div class="rules-column-wrapper">
+              <div class="rules-item-headline big-list-headline-styling">
+                <span>STAY RELEVANT</span>
+              </div>
+              <div class="rules-item-copy big-list-copy-styling">
+                <p>
+                  You can become irrelevant without even knowing it, and for managers, staying
+                  relevant becomes an essential part of the job. For many, the management ladder is
+                  a means to explain why it’s okay to be disconnected. The age old tale that they
+                  now manage managers, they’re conscious of micromanaging, or even more ridiculous,
+                  that they’re supposed to be “operating at 30,000 feet”. Staying relevant not only
+                  requires you to know what your team does, but how they’re doing it without
+                  actually being in the weeds. If the day comes that you have no idea how long a
+                  task should take and can’t read the tea leaves when it comes to roadblocks and
+                  gaps in your team’s initiatives, then you’ve entered your stone age.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rules-item">
+            <div class="rules-column-wrapper">
+              <div class="rules-item-headline big-list-headline-styling">
+                <span>STRIVE FOR PERFECTION, SETTLE FOR GREATNESS</span>
+              </div>
+              <div class="rules-item-copy big-list-copy-styling">
+                <p>
+                  The hardest job I ever had was when I was a lead engineer at an ad agency, what
+                  feels like yesterday and a lifetime ago at the same time. This place beat me down
+                  in so many different ways. Everything I did was never good enough, with every
+                  deliverable requiring a frustrating amount of revisions. Even when I knew in my
+                  heart of hearts it was finally great, it got sent back for more tweaks. After I
+                  left this agency, it somehow made every job afterward feel more straightforward.
+                  When others struggled at their jobs, I was being praised for what would’ve been
+                  considered shit at the previous agency. They demanded perfection only so they
+                  could squeeze out great from me and somehow, it’s the only place I’d ever work for
+                  again.
+                </p>
+              </div>
+            </div>
+            <div class="rules-item-index big-list-index-styling">
+              <svg>
+                <text x="0" y="0" dominant-baseline="hanging">7.</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="rules-item">
+            <div class="rules-item-index big-list-index-styling">
+              <svg>
+                <text x="0" y="0" dominant-baseline="hanging">8.</text>
+              </svg>
+            </div>
+            <div class="rules-column-wrapper">
+              <div class="rules-item-headline big-list-headline-styling">
+                <span>DO NOT OVERINDEX ON NETWORKING</span>
+              </div>
+              <div class="rules-item-copy big-list-copy-styling">
+                <p>
+                  Networking isn’t a job, it’s not even a small part of the job, it’s the outcome of
+                  collaboration. Yet, some people force it and don’t realize they’ve made it an
+                  artificial experience for the other party. A buddy of mine has invested in
+                  networking so much he overleveraged himself to the point where people don’t want
+                  to deal with him. It's become clear he’s lost confidence in delivering anything
+                  tangible against his craft, and what he has today that he greatly values and
+                  believes is his most critical tool in his bag of offerings, is networking. Now
+                  it’s a survival game. In my experience, those that network aggressively are hiding
+                  behind the salt that they have no idea how to get recognized for their work or
+                  even worse, they don’t actually do any work. They talk about it, rally others, and
+                  are the bullhorn for 3rd degree accolades and achievements.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rules-item">
+            <div class="rules-column-wrapper">
+              <div class="rules-item-headline big-list-headline-styling">
+                <span>KNOW WHO YOU YOU WANT TO BE TOMORROW</span>
+              </div>
+              <div class="rules-item-copy big-list-copy-styling">
+                <p>
+                  From time to time, individuals ask me if they should consider management and my
+                  answer is always yes. The world needs shitty, good, and great managers. After all,
+                  being shitty is easy, being good requires work, but being great requires
+                  dedication to growth. If you hate presentations, there's a high probability you’ll
+                  never be great at management, but no one should tell you what to or not to pursue.
+                  They can only and should only point out the development area you need to work on
+                  to get to where you want to be. Who you are, what you’ll become, and how you
+                  evolve from the now to the tomorrow is achievable as long as you know what you’re
+                  getting yourself into. Take all the risks you can, but never set yourself up for
+                  failure.
+                </p>
+              </div>
+            </div>
+            <div class="rules-item-index big-list-index-styling">
+              <svg>
+                <text x="0" y="0" dominant-baseline="hanging">.9</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel download-me" data-theme="theme-1">
+      <div class="cr-box col-container">
+        <div id="download-codebase" class="sticky-scene">
+          <div class="row-container">
+            <div class="copy-headline copy-mixin flex-max-container">
+              <p class="header-text header-styling-L">
+                DOWNLOAD SITE <span class="inline-script-it">(Free CODEBASE HERE!)</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="row-container column-grid download-grid-styling">
+            <div class="grid-item download-grid-styling">
+              <span
+                >This site is developed entirely in <span class="script-it">Typescript</span> &
+                <span class="script-it">SASS</span> and
+                <span class="underline-text">does not use</span> any 3rd party libraries as
+                dependencies (Ok, except for Firebase). <br /><br />But don't get me wrong, I love
+                community contributions. Check out my
+                <span class="script-it">Top 5 Favorite Libraries</span> in
+                <a href="#the-personals" class="overlay-link-text">The Personals</a>.
+              </span>
+            </div>
+
+            <div class="grid-item spinner-holder">
+              <div class="star-spinner-container">
+                <img
+                  src="assets/work-history/hairstyles/hair-4-b.png"
+                  alt="Download Code Responsibly"
+                />
+              </div>
+            </div>
+
+            <div class="grid-item download-grid-styling">
+              <span>
+                The codebase is <span class="underline-text">fully documented</span> in case you'd
+                like to poke around, compile a specific module or borrow a snippet from here or
+                there. <br /><br />
+                Click
+                <a
+                  class="download-link overlay-link-text"
+                  href="/download/code-responsibly-v7.zip"
+                  target="_blank"
+                  >here</a
+                >
+                to download the source or you can hop over to the
+                <a
+                  class="download-link overlay-link-text"
+                  href="https://github.com/code-responsibly/refresh-7"
+                  target="_blank"
+                  >GitHub Repo</a
+                >
+                for the full #VSCODE setup & source.
+              </span>
+            </div>
+          </div>
+          <div class="tag-line-container">
+            <p class="header-styling-S">
+              This <span class="text-mixin-styling">site</span> has been
+              <span data-shadow="downloaded" class="dashed-drop-shadow-with-border"
+                >downloaded</span
+              >
+              a total of
+              <span class="dashed-drop-shadow-with-border codebase-download-counter">2,312</span>
+              times.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <p>A FOOTER FOR YOUR THOUGHTS</p>
+        <p>e-mail me me@coderesponsibly.com</p>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/index.bundle.js?v=1.5"></script>
+  </body>
+</html>

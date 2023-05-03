@@ -1,0 +1,34 @@
+{
+  "extends": "./node_modules/gts/tsconfig-google.json",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "strictPropertyInitialization": false,
+    "module": "ESNext",
+    "target": "ES2021",
+    "moduleResolution": "NodeNext",
+    "declaration": true,
+    "allowJs": true,
+    "sourceMap": false,
+    "outDir": "types/",
+    "baseUrl": "src/ts/",
+    "paths": {
+      "@abstract/*": ["abstract/*"],
+      "@base/*": ["base/*"],
+      "@enums/*": ["enums/*"],
+      "@events/*": ["events/*"],
+      "@interfaces/*": ["interfaces/*"],
+      "@components/*": ["components/*"],
+      "@sections/*": ["components/sections/*"]
+    },
+    "lib": [
+      "es2021",
+      "dom",
+      "dom.Iterable"
+    ]
+  },
+  "files": ["src/ts/app.ts",
+          ],
+   "include": ["**/*.ts", "**/*.tsx"]
+}

@@ -1,0 +1,423 @@
+.inline-wave-text {
+  display: inline-block;
+  position: relative;
+  z-index: -10000;
+  color: transparent;
+  @include x-support('text-stroke', 2px var(--about-water-bottle-stroke-color));
+
+  &::before {
+    content: attr(data-text);
+    color: var(--text-fx-fill-color);
+    left: 0;
+    position: absolute;
+    opacity: 1;
+    animation-delay: 0.5s;
+  }
+
+  &::after {
+    content: attr(data-text);
+    left: 0;
+    position: absolute;
+    color: var(--text-fx-fill-color);
+    opacity: 1;
+  }
+}
+
+.fx-wave-text-1 {
+  animation: wave-animation 2s ease-in-out infinite;
+}
+
+.fx-wave-text-2 {
+  animation: wave-animation-2 10s ease-in-out infinite;
+}
+
+.fx-wave-text-3 {
+  animation-delay: 0.5s;
+  animation: wave-animation-3 4s ease-in infinite;
+}
+
+.fx-wave-text-4 {
+  animation-delay: 0.5s;
+  animation: wave-animation-4 10s ease-in infinite;
+}
+
+.fx-bottle-31 {
+  &::before {
+    @extend .fx-wave-text-3;
+  }
+  &::after {
+    @extend .fx-wave-text-1;
+  }
+}
+
+.fx-bottle-42 {
+  &::before {
+    @extend .fx-wave-text-4;
+  }
+  &::after {
+    @extend .fx-wave-text-2;
+  }
+}
+
+
+@mixin dashed-drop-shadow($outline-color, $outline-color-2, $stroke-color) {
+  $dash-width: 5px;
+  $ratio: 50%;
+  $angle: 45deg;
+  $size: calc($ratio / 2);
+  $half-size: calc($size / 2);
+  $stop-position-1: $half-size;
+  $stop-position-2: 50% - $half-size;
+  $stop-position-3: 50% + $half-size;
+  $stop-position-4: 100% - $half-size;
+
+  @include x-support('background-clip', text);
+  @include x-support('text-fill-color', transparent);
+  @include x-support('text-stroke', 1px $stroke-color);
+  color: transparent;
+  position: relative;
+  display: inline-block;
+  pointer-events: all;
+  background-image: linear-gradient(
+    $angle,
+    $outline-color-2 $stop-position-1,
+    $outline-color $stop-position-1,
+    $outline-color $stop-position-2,
+    $outline-color-2 $stop-position-2,
+    $outline-color-2 $stop-position-3,
+    $outline-color $stop-position-3,
+    $outline-color $stop-position-4,
+    $outline-color-2 $stop-position-4
+  );
+  background-size: $dash-width $dash-width;
+  animation: dash-animation 200s infinite linear;
+  background-attachment: fixed;
+  transition: 1s all;
+
+  &:hover {
+    text-shadow: 0px 0px $outline-color-2;
+  }
+}
+
+.dashed-drop-shadow {
+  @include dashed-drop-shadow(
+    var(--base-color),
+    var(--text-fx-fill-color),
+    var(--text-fx-general-stroke-color)
+  );
+}
+
+@mixin dashed-drop-shadow-with-border(
+  $outline-color,
+  $outline-color-2,
+  $stroke-color
+) {
+  $outline-color-2: var(--base-color);
+  @include dashed-drop-shadow($outline-color, $outline-color-2, $stroke-color);
+  text-shadow: 0px 0px $outline-color-2;
+  &::before {
+    content: '';
+    background-color: var(--content-color-alt);
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 100%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.2s height ease, 0.1s background-color ease,
+      0.2s transform ease;
+  }
+}
+
+.dashed-drop-shadow-with-border {
+  @include dashed-drop-shadow-with-border(
+    var(--base-color),
+    var(--text-fx-fill-color),
+    var(--text-fx-general-stroke-color)
+  );
+}
+
+@mixin overlay-link-text (
+  $outline-color,
+  $outline-color-2,
+  $stroke-color,
+  $stroke-color-2
+) {
+  color: $stroke-color;
+  display: inline-block;
+  pointer-events: all;
+  position: relative;
+
+  &::after {
+    bottom: 0;
+    background-color: $outline-color;
+    content: '';
+    height: 0%;
+    left: -2px;
+    position: absolute;
+    transform: rotate(-2deg);
+    transition: 0.2s height ease, 0.1s background-color ease,
+      0.2s transform ease;
+    width: calc(100% + 4px);
+    z-index: -1;
+  }
+
+  &:hover:after {
+    background-color: $outline-color-2;
+    height: 100%;
+    transform: rotate(2deg);
+  }
+
+  &:hover {
+    color: $stroke-color-2;
+  }
+}
+
+.overlay-link-text {
+  @include overlay-link-text(
+    var(--text-fx-link-border-color),
+    var(--text-fx-link-stroke-color),
+    var(--text-fx-link-border-color),
+    var(--text-fx-link-stroke-hover-color)
+  );
+}
+
+@mixin reverse-dashed-drop-shadow($outline-color, $outline-color-2, $stroke-color) {
+  $dash-width: 5px;
+  $ratio: 50%;
+  $angle: 45deg;
+  $size: calc($ratio / 2);
+  $half-size: calc($size / 2);
+  $stop-position-1: $half-size;
+  $stop-position-2: 50% - $half-size;
+  $stop-position-3: 50% + $half-size;
+  $stop-position-4: 100% - $half-size;
+
+  @include x-support('background-clip', text);
+  @include x-support('text-fill-color', transparent);
+  @include x-support('text-stroke', 1px $stroke-color);
+  background-image: linear-gradient(
+    $angle,
+    $outline-color-2 $stop-position-1,
+    $outline-color $stop-position-1,
+    $outline-color $stop-position-2,
+    $outline-color-2 $stop-position-2,
+    $outline-color-2 $stop-position-3,
+    $outline-color $stop-position-3,
+    $outline-color $stop-position-4,
+    $outline-color-2 $stop-position-4
+  );
+  background-size: $dash-width $dash-width;
+  background-attachment: fixed;
+  color: transparent;
+  display: inline-block;
+  pointer-events: all;
+  position: relative;
+  text-shadow: 0px 0px $outline-color-2;
+  transition: 1s all;
+
+  &:hover {
+    animation: dash-animation 200s infinite linear;
+    text-shadow:none;
+  }
+}
+
+.reverse-dashed-drop-shadow {
+  @include reverse-dashed-drop-shadow(
+    var(--base-color),
+    var(--text-fx-fill-color),
+    var(--text-fx-general-stroke-color)
+  );
+}
+
+@mixin underline-text($underline-color) {
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    content: '';
+    background-color: $underline-color;
+    position: absolute;
+    width: calc(100% - 20%);
+    height: 2px;
+    left: 10%;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
+}
+
+.underline-text {
+  @include underline-text(var(--text-fx-link-border-color));
+}
+
+/** Not Being Used **/
+@mixin dash-overlay-link-text(
+  $outline-color,
+  $outline-color-2,
+  $stroke-color,
+  $stroke-color-2
+) {
+  @include overlay-link-text(
+    $outline-color,
+    $outline-color-2,
+    $stroke-color,
+    $stroke-color-2
+  );
+
+  $dash-width: 5px;
+  $ratio: 50%;
+  $angle: 45deg;
+  $size: calc($ratio / 2);
+  $half-size: calc($size / 2);
+  $stop-position-1: $half-size;
+  $stop-position-2: 50% - $half-size;
+  $stop-position-3: 50% + $half-size;
+  $stop-position-4: 100% - $half-size;
+
+  a {
+    @include x-support('background-clip', text);
+    @include x-support('text-fill-color', transparent);
+    @include x-support('text-stroke', 1px $stroke-color);
+    animation: dash-animation 200s infinite linear;
+    background-attachment: fixed;
+    background-image: linear-gradient(
+      $angle,
+      $outline-color-2 $stop-position-1,
+      $outline-color $stop-position-1,
+      $outline-color $stop-position-2,
+      $outline-color-2 $stop-position-2,
+      $outline-color-2 $stop-position-3,
+      $outline-color $stop-position-3,
+      $outline-color $stop-position-4,
+      $outline-color-2 $stop-position-4
+    );
+    background-size: $dash-width $dash-width;
+    color: transparent;
+    display: inline-block;
+    position: relative;
+    transition: 1s all;
+  }
+
+  a:hover {
+    color: transparent;
+    text-shadow: -3px -3px $outline-color-2;
+  }
+}
+
+.dash-overlay-link-text {
+  @include dash-overlay-link-text(
+    var(--base-color),
+    var(--text-fx-fill-color),
+    var(--text-fx-general-stroke-color),
+    var(--text-fx-outline-color)
+  );
+}
+
+
+@mixin dashed-overlay-drop-shadow($outline-color, $base-color, $shadow-color) {
+  $background-size: 5px;
+  $before-angle: 45deg;
+  $after-angle: 135deg;
+  $top-layer-offset: 3px;
+  $bottom-layer-offset: -3px;
+
+  color: $base-color;
+  display: inline-block;
+  pointer-events: all;
+  position: relative;
+  white-space: pre;
+
+  &::before {
+    @include x-support('background-clip', text);
+    content: attr(data-shadow);
+    background-image: repeating-linear-gradient(
+      $before-angle,
+      transparent 0,
+      transparent 2px,
+      $shadow-color 2px,
+      $shadow-color 4px
+    );
+    background-size: $background-size $background-size;
+    color: transparent;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: 1s all;
+    z-index: -1;
+    white-space: pre;
+  }
+
+  &::after {
+    @include x-support('background-clip', text);
+    animation: dash-animation 10s linear infinite;
+    background-image: repeating-linear-gradient(
+      $after-angle,
+      transparent 0,
+      transparent 2px,
+      $outline-color 2px,
+      $outline-color 4px
+    );
+    background-size: $background-size $background-size;
+    color: transparent;
+    content: attr(data-shadow);
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: 1s all;
+    white-space: pre;
+  }
+
+  &.force-hover:before,
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    left: $top-layer-offset;
+    top: $top-layer-offset;
+  }
+
+  &.force-hover:after,
+  &:hover:after,
+  &:focus:after,
+  &:active:after {
+    left: $bottom-layer-offset;
+    top: $bottom-layer-offset;
+  }
+}
+
+@mixin double-dashed-overlay-drop-shadow(
+  $foreground-color,
+  $background-color,
+  $shadow-color,
+  $fill-color
+) {
+  @include dashed-overlay-drop-shadow(
+    $foreground-color,
+    $background-color,
+    $shadow-color
+  );
+
+  &.force-hover:after,
+  &:hover:after,
+  &:focus,
+  &:active {
+    text-shadow: 1px 1px $fill-color;
+  }
+}
+
+.dashed-overlay-drop-shadow {
+  @include dashed-overlay-drop-shadow(
+    var(--text-fx-outline-color),
+    var(--text-fx-solid-color),
+    var(--text-fx-shadow-color)
+  );
+}
+
+.double-dashed-overlay-drop-shadow {
+  @include double-dashed-overlay-drop-shadow(
+    var(--text-fx-outline-color),
+    var(--text-fx-solid-color),
+    var(--text-fx-shadow-color),
+    var(--text-fx-solid-color-alt)
+  );
+}

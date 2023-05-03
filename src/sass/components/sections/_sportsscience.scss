@@ -1,0 +1,214 @@
+.sports-science-analytics {
+  align-items: flex-start;
+  animation-play-state: paused;
+  animation: show-trap-door 1s ease-in-out forwards;
+  background-color: var(--focus-area-background-color);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  color: var(--focus-area-text-color);
+  display: flex;
+  display: none;
+  justify-content: center;
+  margin: auto;
+  min-height: 100%;
+  opacity: 1;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2000;
+
+  .burger {
+    pointer-events: auto;
+    z-index: 100;
+
+    span {
+      background-color: transparent;
+      &::before {
+        @include x-support('transform', rotate(-45deg));
+      }
+      &::after {
+        @include x-support('transform', rotate(45deg));
+      }
+    }
+  }
+
+  .cr-box {
+    margin: auto;
+    max-height: 93%;
+    max-width: 1440px;
+    min-height: 93%;
+    padding: 0;
+  }
+
+  &.panel {
+    max-width: 100%;
+  }
+
+  .nav-info-area {
+    height: 7%;
+    max-height: 7%;
+    min-height: 7%;
+    padding: 0 10px 10px;
+  }
+
+  .nav-info-area .area-1 {
+    @include flex-box-type(column, nowrap);
+    align-items: flex-start;
+    margin-right: 1vw;
+  }
+
+  .script-it {
+    text-transform: none;
+  }
+
+  .section-indicator-holder {
+    @include flex-box-type(column, nowrap);
+    align-items: flex-end;
+    animation: arrow-jitter 5s infinite;
+    height: 100%;
+    justify-content: flex-end;
+    max-width: 1440px;
+    overflow: hidden;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    img {
+      @include x-support('filter', brightness(0));
+      height: 15vh;
+      margin-right: 15%;
+      max-height: 15vh;
+      opacity: 0.5;
+      padding: 0;
+      width: auto;
+
+      @include media('>=tablet') {
+        height: 10vh;
+        margin-right: 5%;
+        max-height: 10vh;
+      }
+    }
+  }
+}
+
+.snap-section {
+  -ms-overflow-style: none;
+  max-height: 93vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+}
+
+.snap-section::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+.snap-item {
+  @include flex-box-type(column, nowrap);
+  height: auto;
+  min-height: 9vh;
+  padding: 0 10px 10vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  width: 100%;
+  scroll-margin-bottom: 50vh;
+
+  &:nth-child(2) {
+    padding-bottom: 20vh;
+    scroll-margin-bottom: 0;
+  }
+}
+
+.whitepaper-grid-1 {
+  display: grid;
+  grid-template-columns: 20% 20% 1fr;
+  gap: 20px 25px;
+  grid-template-areas:
+    'paper-title paper-title paper-links'
+    'paper-tagline paper-tagline paper-tagline'
+    'paper-description paper-description paper-description'
+    'paper-abstract paper-abstract paper-abstract';
+
+  @include media('>=tablet') {
+    grid-template-rows: 0.5fr 0.1fr 0.1fr 1fr;
+  }
+
+  span {
+    display: flex;
+  }
+}
+
+.paper-abstract {
+  grid-area: paper-abstract;
+}
+
+.paper-description {
+  grid-area: paper-description;
+}
+
+.paper-links {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  grid-area: paper-links;
+  justify-content: center;
+}
+
+.paper-tagline {
+  grid-area: paper-tagline;
+}
+
+.paper-title {
+  background-color: #eeeeee;
+  grid-area: paper-title;
+  
+  span {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    line-height: 1;
+    text-align: left;
+  }
+}
+
+.horizontal-column-wrap-container {
+  column-count: 1;
+  column-width: 90vw;
+
+  @include media('>=tablet') {
+    column-count: 3;
+    column-width: 25vw;
+  }
+}
+
+@keyframes show-trap-door {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@keyframes hide-trap-door {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes arrow-jitter {
+  0% {
+    transform: translateY(-5vh);
+  }
+  50% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(-5vh);
+  }
+}
